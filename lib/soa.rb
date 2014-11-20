@@ -19,7 +19,6 @@ class Soa < Avvio
       lista_file
    end
 
-
    def trova_email_autorizzazione
       #TODO: inserire il controllo di inizzio validita e fine validita
       file = Array.new
@@ -74,24 +73,39 @@ class Soa < Avvio
       end
    end
 
-
    def lista_file
       case nome_controllo
-      when "Autorizzazioni"                  then
+      when "Autorizzazioni"                     then
          trova_email_autorizzazione  "tutte"
-      when "MGP_Validate"                    then
+      when "MGP_Validate","MGP_Esitate"         then
          files = ["#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/SOA Italia/Validate/Validate_Eni_#{data[:day]}#{data[:month]}#{data[:year]}.xls",
                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/Controllo Prezzi MGP/Prezzi_Offerte_#{$ControlloMGP}_#{data[:day]}#{data[:month]}#{data[:year]}.xls",
                   "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_ENIIMMISSIONE_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls",
                   "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_ENIPOWER MANTOVA_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls",
                   "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_ENIPOWER_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls",
                   "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_SEF_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls",
-                  "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_ENIPRELIEVO_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+                  "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Validati/ProgrFisica_ENIPRELIEVO_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls",
          ]
-      when "MGP_Esitate"                     then
-
-      when "Estero_Validate"                 then
-
+         if nome_controllo ==  "MGP_Esitate" 
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_#{data[:day]}#{data[:month]}#{data[:year]}.xls"
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Esitati/ProgrFisica_ENIIMMISSIONE_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Esitati/ProgrFisica_ENIPOWER MANTOVA_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Esitati/ProgrFisica_ENIPOWER_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Esitati/ProgrFisica_SEF_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+            files << "#{$F}PROGRAMMAZIONE #{data[:year]}/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/#{data[:month]} #{data[:mesetext]} #{data[:year]}/Esitati/ProgrFisica_ENIPRELIEVO_#{data[:year].to_s[2..3]}#{data[:month]}#{data[:day]}.xls"
+         end
+      when "Estero_Validate"         then
+         files = [ "#{$F}PROGRAMMAZIONE #{data[:year]}/FRANCIA/SOA FRANCIA/02 PowerNext/#{data[:month]} #{data[:mesetext]}/01 Autorizzazioni Powernext/01_AutorizzazionePowerNext_ENI_#{data[:year]}#{data[:month]}#{data[:day]}.xls",
+                   "#{$F}PROGRAMMAZIONE #{data[:year]}/FRANCIA/SOA FRANCIA/02 PowerNext/#{data[:month]} #{data[:mesetext]}/02 Screenshot inviati/Invio Offerta su Piattaforma Powernext_#{data[:year]}#{data[:month]}#{data[:day]}.doc",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/SVIZZERA/SOA SVIZZERA/02 Epex/#{data[:month]} #{data[:mesetext]}/01 Autorizzazioni Epex/01_AutorizzazioneEpexCH_ENI_#{data[:year]}#{data[:month]}#{data[:day]}.xls",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/SVIZZERA/SOA SVIZZERA/02 Epex/#{data[:month]} #{data[:mesetext]}/02 Screenshot inviati/Invio Offerta su Piattaforma EpexCH_#{data[:year]}#{data[:month]}#{data[:day]}.doc",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/GERMANIA/SOA GERMANIA/02 Epex/#{data[:month]} #{data[:mesetext]}/01 Autorizzazioni Epex/01_AutorizzazioneEpexDE_ENI_#{data[:year]}#{data[:month]}#{data[:day]}.xls",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/GERMANIA/SOA GERMANIA/02 Epex/#{data[:month]} #{data[:mesetext]}/02 Screenshot inviati/Invio Offerta su Piattaforma EpexDE_#{data[:year]}#{data[:month]}#{data[:day]}.doc",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/BELGIO/Tool Belpex/#{data[:month]} #{data[:mesetext]}/tool autorizzazione offerte belpex_#{data[:day]}#{data[:month]}#{data[:year].to_s[2..3]}.xlsm",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/BELGIO/Esiti Borsa/Validate/#{data[:month]} #{data[:mesetext]}/Validate_BELPEX_#{data[:day]}#{data[:month]}#{data[:year].to_s[2..3]}.xls",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/OLANDA/#{data[:month]} #{data[:mesetext]}/#{data[:day]}_#{data[:month]}_#{data[:year]}/Export E-prog46_ita.xls",
+                   "#{$G}MEOR/PROGRAMMAZIONE #{data[:year]}/OLANDA/Borsa/Validate/Validate_Olanda_#{data[:day]}#{data[:month]}#{data[:year].to_s[2..3]}.xls"
+         ]
       when "Estero_Esitate"                  then
 
       when "MI_Form_D"                       then
@@ -108,22 +122,22 @@ class Soa < Avvio
 
       end
       trova_file(files)
-      
-      
+
+
    end
 
-
    def trova_file(files)
-         files.each do |file|
-            if result = controRev(file)
-               @file << result
-            else
-               dir, base = File.split(Pathname.new(file))
-               errore[base.to_s] = "Non è stato trovato il file #{base.to_s} nella directory #{dir.to_s}"
-            end
+      ap files
+      files.each do |file|
+         if result = controRev(file)
+            @file << result
+         else
+            dir, base = File.split(Pathname.new(file))
+            errore[base.to_s] = "Non è stato trovato il file #{base.to_s} nella directory #{dir.to_s}"
          end
-         email = trova_email_autorizzazione
-         email.each{|f| @file << f} unless email.empty?      
+      end
+      email = trova_email_autorizzazione
+      email.each{|f| @file << f} unless email.empty?      
    end
 
    def controRev(file)
@@ -139,6 +153,24 @@ class Soa < Avvio
       end
    end
 
+   def crea_zip
+      @zip.delete if @zip.exist?
+      Zip::File.open(@zip, Zip::File::CREATE) do |zf|
+         @file.each do |f|
+            if f.fnmatch?("*/ProgrFisica_*")
+               if f.fnmatch?("*/Validati/*")
+                  zf.mkdir("validate_pce") if zf.find_entry("validate_pce") == nil
+                  zf.add("validate_pce"+"/"+(f.basename).to_s, f)
+               else
+                  zf.mkdir("esitate_pce") if zf.find_entry("esitate_pce") == nil
+                  zf.add("esitate_pce"+"/"+(f.basename).to_s, f)
+               end
+            else
+               zf.add(f.basename, f)
+            end
+         end
+      end
+   end
 
 
 end

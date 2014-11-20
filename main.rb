@@ -13,3 +13,4 @@ $ControlloMGP = "MGP_1.1"
 
 window = GuiSoa.new
 Gtk.main
+

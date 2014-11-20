@@ -1,0 +1,4 @@
+syn keyword CTagsModule ExcelConst
+syn keyword CTagsMethod init_ui parse_path start_excel avanzamento_progress_bar lista_file NumeroToMese make_list init add_columns trova_email_autorizzazione controRev crea_zip create_model fixed_toggled_vpp start start_word fixed_toggled start_vpp start_win_error trova_file initialize path_file_zip iniziallizza_data controlloRev inizializza_path finalizze_application
+syn keyword CTagsClass Array Soa GuiSoa Avvio
+

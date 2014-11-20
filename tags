@@ -1,37 +1,40 @@
-!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
-add_columns	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f	language:Ruby
-Animale	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^class Animale$/;"	c	language:Ruby
-avanzamento_progress_bar	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def avanzamento_progress_bar(progress,statusbar,k)$/;"	f	language:Ruby	class:Avvio
-Avvio	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^class Avvio$/;"	c	language:Ruby
-Cane	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^class Cane < Animale$/;"	c	language:Ruby
-controlloRev	P:\Dropbox\progetti\20141114 - Soa\lib\utility.rb	/^def controlloRev(path,inputfile)$/;"	f	language:Ruby
-controRev	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def controRev(file)$/;"	f	language:Ruby	class:Soa
-create_model	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def create_model data$/;"	f	language:Ruby
-crea_zip	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def crea_zip zip$/;"	f	language:Ruby	class:Avvio
-ExcelConst	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^module ExcelConst end$/;"	m	language:Ruby
-finalizze_application	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def finalizze_application(button,statusbar,progress,parent)$/;"	f	language:Ruby	class:Avvio
-fixed_toggled	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def fixed_toggled(model, path_str)$/;"	f	language:Ruby
-fixed_toggled_vpp	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def fixed_toggled_vpp(model, path_str,model_other)$/;"	f	language:Ruby
-Gatto	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^class Gatto < Animale$/;"	c	language:Ruby
-GuiSoa	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^class GuiSoa < Gtk::Window$/;"	c	language:Ruby
-init	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def init(progress,statusbar, step)$/;"	f	language:Ruby	class:Avvio
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def initialize(data,soa)$/;"	f	language:Ruby	class:Avvio
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def initialize$/;"	f	language:Ruby	class:GuiSoa
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^   def initialize(nome)$/;"	f	language:Ruby	class:Animale
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^   def initialize(nome)$/;"	f	language:Ruby	class:Cane
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^   def initialize(nome)$/;"	f	language:Ruby	class:Gatto
-initialize	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def initialize(nome, data)$/;"	f	language:Ruby	class:Soa
-init_ui	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def init_ui$/;"	f	language:Ruby
-inizializza_path	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def inizializza_path$/;"	f	language:Ruby	class:Soa
-lista_file	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def lista_file$/;"	f	language:Ruby	class:Soa
-make_list	P:\Dropbox\progetti\20141114 - Soa\lib\gui.rb	/^        def make_list data,header,list_soa$/;"	f	language:Ruby
-miagola	P:\Dropbox\progetti\20141114 - Soa\lib\prova.rb	/^   def miagola$/;"	f	language:Ruby	class:Gatto
-NumeroToMese	P:\Dropbox\progetti\20141114 - Soa\lib\utility.rb	/^def NumeroToMese(mese)$/;"	f	language:Ruby
-path_file_zip	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def path_file_zip $/;"	f	language:Ruby	class:Soa
-Soa	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^class Soa < Avvio$/;"	c	language:Ruby
-start	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def start(button, progress,statusbar,parent)$/;"	f	language:Ruby	class:Avvio
-start_excel	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def start_excel$/;"	f	language:Ruby	class:Avvio
-start_vpp	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	language:Ruby	class:Avvio
-start_word	P:\Dropbox\progetti\20141114 - Soa\lib\avvio.rb	/^   def start_word$/;"	f	language:Ruby	class:Avvio
-trova_email_autorizzazione	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def trova_email_autorizzazione$/;"	f	language:Ruby	class:Soa
-trova_file	P:\Dropbox\progetti\20141114 - Soa\lib\soa.rb	/^   def trova_file(files)$/;"	f	language:Ruby	class:Soa
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Array	.\lib\prova.rb	/^class Array$/;"	c
+Avvio	.\lib\avvio.rb	/^class Avvio$/;"	c
+ExcelConst	.\lib\avvio.rb	/^module ExcelConst end$/;"	m
+GuiSoa	.\lib\gui.rb	/^class GuiSoa < Gtk::Window$/;"	c
+NumeroToMese	.\lib\utility.rb	/^def NumeroToMese(mese)$/;"	f
+Soa	.\lib\soa.rb	/^class Soa < Avvio$/;"	c
+add_columns	.\lib\gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f
+avanzamento_progress_bar	.\lib\avvio.rb	/^   def avanzamento_progress_bar(progress,statusbar,k)$/;"	f	class:Avvio
+controRev	.\lib\soa.rb	/^   def controRev(file)$/;"	f	class:Soa
+controlloRev	.\lib\utility.rb	/^def controlloRev(path,inputfile)$/;"	f
+crea_zip	.\lib\avvio.rb	/^   def crea_zip zip$/;"	f	class:Avvio
+crea_zip	.\lib\soa.rb	/^   def crea_zip$/;"	f	class:Soa
+create_model	.\lib\gui.rb	/^        def create_model data$/;"	f
+finalizze_application	.\lib\avvio.rb	/^   def finalizze_application(button,statusbar,progress,parent)$/;"	f	class:Avvio
+fixed_toggled_vpp	.\lib\gui.rb	/^        def fixed_toggled_vpp(model, path_str,model_other)$/;"	f
+fixed_toggled	.\lib\gui.rb	/^        def fixed_toggled(model, path_str)$/;"	f
+init_ui	.\lib\gui.rb	/^        def init_ui$/;"	f
+init	.\lib\avvio.rb	/^   def init(progress,statusbar, step)$/;"	f	class:Avvio
+initialize	.\lib\avvio.rb	/^   def initialize(data,soa)$/;"	f	class:Avvio
+initialize	.\lib\gui.rb	/^        def initialize$/;"	f	class:GuiSoa
+initialize	.\lib\soa.rb	/^   def initialize(nome, data)$/;"	f	class:Soa
+inizializza_path	.\lib\soa.rb	/^   def inizializza_path$/;"	f	class:Soa
+iniziallizza_data	.\lib\soa.rb	/^   def iniziallizza_data(data)$/;"	f	class:Soa
+lista_file	.\lib\soa.rb	/^   def lista_file$/;"	f	class:Soa
+make_list	.\lib\gui.rb	/^        def make_list data,header,list_soa$/;"	f
+parse_path	.\lib\prova.rb	/^   def parse_path()$/;"	f	class:Array
+path_file_zip	.\lib\soa.rb	/^   def path_file_zip$/;"	f	class:Soa
+start_excel	.\lib\avvio.rb	/^   def start_excel$/;"	f	class:Avvio
+start_vpp	.\lib\avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	class:Avvio
+start_win_error	.\lib\avvio.rb	/^   def start_win_error$/;"	f	class:Avvio
+start_word	.\lib\avvio.rb	/^   def start_word$/;"	f	class:Avvio
+start	.\lib\avvio.rb	/^   def start(button, progress,statusbar,parent)$/;"	f	class:Avvio
+trova_email_autorizzazione	.\lib\soa.rb	/^   def trova_email_autorizzazione$/;"	f	class:Soa
+trova_file	.\lib\soa.rb	/^   def trova_file(files)$/;"	f	class:Soa

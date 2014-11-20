@@ -1,0 +1,13 @@
+---
+MGP_Validate:
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MGP/Prezzi_Offerte_|V_CONTROOLLO_MGP|_|DAY||MONTH||YEAR|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIIMMISSIONE_|YEAR_SHORT||MONTH||DAY|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIPOWER MANTOVA_|YEAR_SHORT||MONTH||DAY|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIPOWER_|YEAR_SHORT||MONTH||DAY|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_SEF_|YEAR_SHORT||MONTH||DAY|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIPRELIEVO_|YEAR_SHORT||MONTH||DAY|.xls"
+MGP_Esitate:
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MGP/Prezzi_Offerte_#{$ControlloMGP}_|DAY||MONTH||YEAR|.xls"
+
