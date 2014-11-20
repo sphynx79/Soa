@@ -60,8 +60,20 @@ MI_Validate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI2_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI1.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI2.xls"
-MI_Esitate_File:
-- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI1_|DAY||MONTH||YEAR|.xls"
-- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI2_|DAY||MONTH||YEAR|.xls"
-- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI1.xls"
-- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI2.xls"
+MI_D_Form_File:
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI3.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI4.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI3/MI3_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI4/MI4_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
+MI_D_Esitate_File:
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI3.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI4.xls"
+MI_D_Validate_File:
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
+- "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI3.xls"
+- "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI4.xls"

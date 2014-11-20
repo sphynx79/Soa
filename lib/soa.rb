@@ -75,15 +75,14 @@ class Soa
               when "MGP_Esitate"         then $settings["MGP_Esitate_File"]
               when "Estero_Validate"     then $settings["Estero_Validate_File"]
               when "Estero_Esitate"      then $settings["Estero_Esitate_File"]
-              when "MI_Form"           then $settings["MI_Form_File"]
+              when "MI_Form"             then $settings["MI_Form_File"]
               when "MI_Validate"         then $settings["MI_Validate_File"]
               when "MI_Esitate"          then $settings["MI_Esitate_File"]
-              when "MI_Form_D"           then $settings["MI_Form_File"]
-              when "MI_Validate_D"       then nil
-              when "MI_Esitate_D"        then nil
+              when "MI_Form_D"           then $settings["MI_D_Form_File"]
+              when "MI_Validate_D"       then $settings["MI_D_Validate_File"]
+              when "MI_Esitate_D"        then $settings["MI_D_Esitate_File"]
               when "Vpp"                 then nil
               end
-      ap files
       trova_file(files)
    end
 
