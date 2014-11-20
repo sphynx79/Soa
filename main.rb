@@ -7,10 +7,16 @@ require File.join(File.dirname(__FILE__), 'lib/Gui.rb')
 require File.join(File.dirname(__FILE__), 'lib/soa.rb')
 require File.join(File.dirname(__FILE__), 'lib/avvio.rb')
 
-$F = 'H:/'
-$G = 'H:/'
-$ControlloMGP = "MGP_1.1"
-
+$F             = 'H:/'
+$G             = 'H:/'
+$controllomgp  = "MGP_1.1"
+$settings      = Hash.new
+$year          = nil
+$year_short    = nil
+$month         = nil
+$monthtext     = nil
+$day           = nil
+$week          = nil
 window = GuiSoa.new
 Gtk.main
 

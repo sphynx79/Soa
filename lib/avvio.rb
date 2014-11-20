@@ -7,6 +7,7 @@ require 'pathname'
 require 'ap'
 require 'byebug'
 require 'zip'
+require 'yaml'
 
 module ExcelConst end
 
@@ -21,6 +22,33 @@ class Avvio
       @zip         = []
    end
 
+   def iniziallizza_global_data()
+      $year          = data.strftime("%Y")
+      $year_short    = data.strftime("%y")
+      $month         = data.strftime("%m")
+      $monthtext     = NumeroToMese(data.strftime("%m"))
+      $day           = data.strftime("%d")
+      $week          = data.cweek
+   end
+
+   def iniziallizza_global_setting()
+      $settings = YAML::load_file(File.join(File.dirname(__FILE__), "settings.yml"))
+      $settings.each{|k,v|
+         v.collect!{|x|
+            x.gsub!("|YEAR|", $year)
+            x.gsub!("|YEAR_SHORT|", $year_short)
+            x.gsub!("|MONTH|", $month)
+            x.gsub!("|DAY|", $day)
+            x.gsub!("|MESETEXT|",$monthtext)
+            x.gsub!("|F|", $F)
+            x.gsub!("|G|", $G)
+            x.gsub!("|V_CONTROOLLO_MGP|", $controllomgp)
+            x
+         }
+      }
+   end
+
+
    def init(progress,statusbar, step)
 
    end
@@ -31,8 +59,11 @@ class Avvio
 
    def start(button, progress,statusbar,parent)
       @button, @progress, @statusbar, @parent = button, progress, statusbar, parent
+      iniziallizza_global_data()
+      iniziallizza_global_setting()
+
       soa.each do |nome_soa,obj_soa|
-         soa[nome_soa] =  Soa.new(nome_soa, data)
+         soa[nome_soa] =  Soa.new(nome_soa)
          soa[nome_soa].inizializza_path
          soa[nome_soa].crea_zip
          unless (soa[nome_soa].errore).empty?
@@ -44,6 +75,9 @@ class Avvio
       end
       button.sensitive = true
    end
+
+
+
 
 
 

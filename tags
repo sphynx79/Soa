@@ -9,7 +9,7 @@ Avvio	.\lib\avvio.rb	/^class Avvio$/;"	c
 ExcelConst	.\lib\avvio.rb	/^module ExcelConst end$/;"	m
 GuiSoa	.\lib\gui.rb	/^class GuiSoa < Gtk::Window$/;"	c
 NumeroToMese	.\lib\utility.rb	/^def NumeroToMese(mese)$/;"	f
-Soa	.\lib\soa.rb	/^class Soa < Avvio$/;"	c
+Soa	.\lib\soa.rb	/^class Soa $/;"	c
 add_columns	.\lib\gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f
 avanzamento_progress_bar	.\lib\avvio.rb	/^   def avanzamento_progress_bar(progress,statusbar,k)$/;"	f	class:Avvio
 controRev	.\lib\soa.rb	/^   def controRev(file)$/;"	f	class:Soa
@@ -24,13 +24,14 @@ init_ui	.\lib\gui.rb	/^        def init_ui$/;"	f
 init	.\lib\avvio.rb	/^   def init(progress,statusbar, step)$/;"	f	class:Avvio
 initialize	.\lib\avvio.rb	/^   def initialize(data,soa)$/;"	f	class:Avvio
 initialize	.\lib\gui.rb	/^        def initialize$/;"	f	class:GuiSoa
-initialize	.\lib\soa.rb	/^   def initialize(nome, data)$/;"	f	class:Soa
+initialize	.\lib\soa.rb	/^   def initialize(nome)$/;"	f	class:Soa
 inizializza_path	.\lib\soa.rb	/^   def inizializza_path$/;"	f	class:Soa
-iniziallizza_data	.\lib\soa.rb	/^   def iniziallizza_data(data)$/;"	f	class:Soa
+iniziallizza_global_data	.\lib\avvio.rb	/^   def iniziallizza_global_data()$/;"	f	class:Avvio
+iniziallizza_global_setting	.\lib\avvio.rb	/^   def iniziallizza_global_setting()$/;"	f	class:Avvio
 lista_file	.\lib\soa.rb	/^   def lista_file$/;"	f	class:Soa
 make_list	.\lib\gui.rb	/^        def make_list data,header,list_soa$/;"	f
 parse_path	.\lib\prova.rb	/^   def parse_path()$/;"	f	class:Array
-path_file_zip	.\lib\soa.rb	/^   def path_file_zip$/;"	f	class:Soa
+path_file_zip	.\lib\soa.rb	/^   def path_file_zip $/;"	f	class:Soa
 start_excel	.\lib\avvio.rb	/^   def start_excel$/;"	f	class:Avvio
 start_vpp	.\lib\avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	class:Avvio
 start_win_error	.\lib\avvio.rb	/^   def start_win_error$/;"	f	class:Avvio

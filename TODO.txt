@@ -1,0 +1,2 @@
+
+- Sistemare i PATH della svizzera nel file settings.yml
