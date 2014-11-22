@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>
+  Class: GuiSoa
+  
+    &mdash; Documentation by YARD 0.8.7.6
+  
+</title>
+
+  <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+  <link rel="stylesheet" href="css/common.css" type="text/css" charset="utf-8" />
+
+<script type="text/javascript" charset="utf-8">
+  hasFrames = window.top.frames.main ? true : false;
+  relpath = '';
+  framesUrl = "frames.html#!GuiSoa.html";
+</script>
+
+
+  <script type="text/javascript" charset="utf-8" src="js/jquery.js"></script>
+
+  <script type="text/javascript" charset="utf-8" src="js/app.js"></script>
+
+
+  </head>
+  <body>
+    <div id="header">
+      <div id="menu">
+  
+    <a href="_index.html">Index (G)</a> &raquo;
+    
+    
+    <span class="title">GuiSoa</span>
+  
+
+  <div class="noframes"><span class="title">(</span><a href="." target="_top">no frames</a><span class="title">)</span></div>
+</div>
+
+      <div id="search">
+  
+    <a class="full_list_link" id="class_list_link"
+        href="class_list.html">
+      Class List
+    </a>
+  
+    <a class="full_list_link" id="method_list_link"
+        href="method_list.html">
+      Method List
+    </a>
+  
+    <a class="full_list_link" id="file_list_link"
+        href="file_list.html">
+      File List
+    </a>
+  
+</div>
+      <div class="clear"></div>
+    </div>
+
+    <iframe id="search_frame"></iframe>
+
+    <div id="content"><h1>Class: GuiSoa
+  
+  
+  
+</h1>
+
+<dl class="box">
+  
+    <dt class="r1">Inherits:</dt>
+    <dd class="r1">
+      <span class="inheritName">Gtk::Window</span>
+      
+        <ul class="fullTree">
+          <li>Object</li>
+          
+            <li class="next">Gtk::Window</li>
+          
+            <li class="next">GuiSoa</li>
+          
+        </ul>
+        <a href="#" class="inheritanceTree">show all</a>
+      
+      </dd>
+    
+  
+  
+    
+  
+    
+  
+  
+  
+    <dt class="r2 last">Defined in:</dt>
+    <dd class="r2 last">lib/gui.rb</dd>
+  
+</dl>
+<div class="clear"></div>
+
+<h2>Defined Under Namespace</h2>
+<p class="children">
+  
+    
+  
+    
+      <strong class="classes">Classes:</strong> <span class='object_link'><a href="GuiSoa/Colonne.html" title="GuiSoa::Colonne (class)">Colonne</a></span>
+    
+  
+</p>
+
+  <h2>Constant Summary</h2>
+  
+    <dl class="constants">
+      
+        <dt id="SOA_D_MENO_UNO_MATTINA-constant" class="">SOA_D_MENO_UNO_MATTINA =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+<span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Autorizzazioni</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MGP_Validate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MGP_Esitate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Estero_Validate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Estero_Esitate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ary'>ary</span><span class='op'>|</span>
+    <span class='const'>Colonne</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre></dd>
+      
+        <dt id="SOA_D_MENO_UNO_POMERIGGIO-constant" class="">SOA_D_MENO_UNO_POMERIGGIO =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+<span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Form</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='op'>!</span><span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Validate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+<span class='lbracket'>[</span> <span class='op'>!</span><span class='id identifier rubyid_set_ckeck'>set_ckeck</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Esitate</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+    <span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ary'>ary</span><span class='op'>|</span>
+    <span class='const'>Colonne</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre></dd>
+      
+        <dt id="SOA_D-constant" class="">SOA_D =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+    <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Form_D</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Validate_D</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span><span class='comma'>,</span>
+    <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>MI_Esitate_D</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ary'>ary</span><span class='op'>|</span>
+    <span class='const'>Colonne</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre></dd>
+      
+        <dt id="VPP-constant" class="">VPP =
+          
+        </dt>
+        <dd><pre class="code"><span class='lbracket'>[</span>
+    <span class='lbracket'>[</span> <span class='kw'>false</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>Vpp</span><span class='tstring_end'>&#39;</span></span><span class='rbracket'>]</span>
+<span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_collect'>collect</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_ary'>ary</span><span class='op'>|</span>
+    <span class='const'>Colonne</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='op'>*</span><span class='id identifier rubyid_ary'>ary</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre></dd>
+      
+    </dl>
+  
+
+
+
+
+
+
+
+  
+    <h2>
+      Instance Method Summary
+      <small>(<a href="#" class="summary_toggle">collapse</a>)</small>
+    </h2>
+
+    <ul class="summary">
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#add_columns-instance_method" title="#add_columns (instance method)">- (Object) <strong>add_columns</strong>(treeview, header, list_soa) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#create_model-instance_method" title="#create_model (instance method)">- (Object) <strong>create_model</strong>(data) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fixed_toggled-instance_method" title="#fixed_toggled (instance method)">- (Object) <strong>fixed_toggled</strong>(model, path_str) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#fixed_toggled_vpp-instance_method" title="#fixed_toggled_vpp (instance method)">- (Object) <strong>fixed_toggled_vpp</strong>(model, path_str, model_other) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#init_ui-instance_method" title="#init_ui (instance method)">- (Object) <strong>init_ui</strong> </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#initialize-instance_method" title="#initialize (instance method)">- (GuiSoa) <strong>initialize</strong> </a>
+    
+
+    
+  </span>
+  
+  
+    <span class="note title constructor">constructor</span>
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'>
+<p>A new instance of GuiSoa.</p>
+</div></span>
+  
+</li>
+
+      
+        <li class="public ">
+  <span class="summary_signature">
+    
+      <a href="#make_list-instance_method" title="#make_list (instance method)">- (Object) <strong>make_list</strong>(data, header, list_soa) </a>
+    
+
+    
+  </span>
+  
+  
+  
+  
+  
+  
+  
+
+  
+    <span class="summary_desc"><div class='inline'></div></span>
+  
+</li>
+
+      
+    </ul>
+  
+
+
+  <div id="constructor_details" class="method_details_list">
+  <h2>Constructor Details</h2>
+  
+    <div class="method_details first">
+  <h3 class="signature first" id="initialize-instance_method">
+  
+    - (<tt><span class='object_link'><a href="" title="GuiSoa (class)">GuiSoa</a></span></tt>) <strong>initialize</strong> 
+  
+
+  
+
+  
+</h3><div class="docstring">
+  <div class="discussion">
+    
+<p>Returns a new instance of GuiSoa</p>
+
+
+  </div>
+</div>
+<div class="tags">
+  
+
+</div><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 43</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_initialize'>initialize</span>
+    <span class='kw'>super</span>
+    <span class='id identifier rubyid_set_title'>set_title</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Gestione SOA</span><span class='tstring_end'>&quot;</span></span>
+    <span class='id identifier rubyid_signal_connect'>signal_connect</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>destroy</span><span class='tstring_end'>&quot;</span></span> <span class='kw'>do</span>
+        <span class='const'>Gtk</span><span class='period'>.</span><span class='id identifier rubyid_main_quit'>main_quit</span>
+    <span class='kw'>end</span>
+    <span class='id identifier rubyid_init_ui'>init_ui</span>
+    <span class='id identifier rubyid_set_default_size'>set_default_size</span> <span class='int'>412</span><span class='comma'>,</span> <span class='int'>200</span>
+    <span class='id identifier rubyid_set_border_width'>set_border_width</span> <span class='int'>10</span>
+    <span class='comment'>#set_keep_above(true)
+</span>    <span class='id identifier rubyid_set_window_position'>set_window_position</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Window</span><span class='op'>::</span><span class='const'>POS_CENTER</span>
+    <span class='id identifier rubyid_show_all'>show_all</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+  
+</div>
+
+
+  <div id="instance_method_details" class="method_details_list">
+    <h2>Instance Method Details</h2>
+
+    
+      <div class="method_details first">
+  <h3 class="signature first" id="add_columns-instance_method">
+  
+    - (<tt>Object</tt>) <strong>add_columns</strong>(treeview, header, list_soa) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 100</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_add_columns'>add_columns</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='comma'>,</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span><span class='id identifier rubyid_list_soa'>list_soa</span><span class='rparen'>)</span>
+    <span class='comment'># column for fixed toggles
+</span>    <span class='id identifier rubyid_renderer'>renderer</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>CellRendererToggle</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='kw'>if</span> <span class='id identifier rubyid_header'>header</span> <span class='op'>==</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Vpp</span><span class='tstring_end'>&quot;</span></span>
+      <span class='id identifier rubyid_renderer'>renderer</span><span class='period'>.</span><span class='id identifier rubyid_signal_connect'>signal_connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>toggled</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cell'>cell</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='op'>|</span>
+      <span class='id identifier rubyid_fixed_toggled_vpp'>fixed_toggled_vpp</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_list_soa'>list_soa</span><span class='lbracket'>[</span><span class='int'>0</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_fixed_toggled_vpp'>fixed_toggled_vpp</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_list_soa'>list_soa</span><span class='lbracket'>[</span><span class='int'>1</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+      <span class='id identifier rubyid_fixed_toggled_vpp'>fixed_toggled_vpp</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='comma'>,</span> <span class='id identifier rubyid_list_soa'>list_soa</span><span class='lbracket'>[</span><span class='int'>2</span><span class='rbracket'>]</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+    <span class='kw'>else</span>
+      <span class='id identifier rubyid_renderer'>renderer</span><span class='period'>.</span><span class='id identifier rubyid_signal_connect'>signal_connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>toggled</span><span class='tstring_end'>&#39;</span></span><span class='rparen'>)</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_cell'>cell</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='op'>|</span>
+      <span class='id identifier rubyid_fixed_toggled'>fixed_toggled</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+      <span class='kw'>end</span>
+
+    <span class='kw'>end</span>
+
+    <span class='id identifier rubyid_column'>column</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreeViewColumn</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_end'>&#39;</span></span><span class='comma'>,</span>
+                                     <span class='id identifier rubyid_renderer'>renderer</span><span class='comma'>,</span>
+                                     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>active</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>COLUMN_CHECK</span><span class='rparen'>)</span>
+
+    <span class='comment'># set this column to a fixed sizing (of 50 pixels)
+</span>    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_sizing'>sizing</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreeViewColumn</span><span class='op'>::</span><span class='const'>FIXED</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_fixed_width'>fixed_width</span> <span class='op'>=</span> <span class='int'>32</span>
+    <span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_append_column'>append_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column'>column</span><span class='rparen'>)</span>
+
+    <span class='comment'># column for bug numbers
+</span>    <span class='id identifier rubyid_renderer'>renderer</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>CellRendererText</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_column'>column</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreeViewColumn</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span>
+                                     <span class='id identifier rubyid_renderer'>renderer</span><span class='comma'>,</span>
+                                     <span class='tstring'><span class='tstring_beg'>&#39;</span><span class='tstring_content'>text</span><span class='tstring_end'>&#39;</span></span> <span class='op'>=&gt;</span> <span class='const'>COLUMN_DESCRIPTION</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_sizing'>sizing</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreeViewColumn</span><span class='op'>::</span><span class='const'>FIXED</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_fixed_width'>fixed_width</span> <span class='op'>=</span> <span class='int'>98</span>
+    <span class='id identifier rubyid_column'>column</span><span class='period'>.</span><span class='id identifier rubyid_set_sort_column_id'>set_sort_column_id</span><span class='lparen'>(</span><span class='const'>COLUMN_DESCRIPTION</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_append_column'>append_column</span><span class='lparen'>(</span><span class='id identifier rubyid_column'>column</span><span class='rparen'>)</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="create_model-instance_method">
+  
+    - (<tt>Object</tt>) <strong>create_model</strong>(data) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 87</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_create_model'>create_model</span> <span class='id identifier rubyid_data'>data</span>
+    <span class='comment'># create list store
+</span>    <span class='id identifier rubyid_store'>store</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>ListStore</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='const'>TrueClass</span><span class='comma'>,</span> <span class='const'>String</span><span class='rparen'>)</span>
+    <span class='comment'># add data to the list store
+</span>    <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_bug'>bug</span><span class='op'>|</span>
+        <span class='id identifier rubyid_iter'>iter</span> <span class='op'>=</span> <span class='id identifier rubyid_store'>store</span><span class='period'>.</span><span class='id identifier rubyid_append'>append</span>
+        <span class='id identifier rubyid_bug'>bug</span><span class='period'>.</span><span class='id identifier rubyid_each_with_index'>each_with_index</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_value'>value</span><span class='comma'>,</span> <span class='id identifier rubyid_index'>index</span><span class='op'>|</span>
+            <span class='id identifier rubyid_iter'>iter</span><span class='lbracket'>[</span><span class='id identifier rubyid_index'>index</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_value'>value</span>
+        <span class='kw'>end</span>
+    <span class='kw'>end</span>
+    <span class='kw'>return</span> <span class='id identifier rubyid_store'>store</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fixed_toggled-instance_method">
+  
+    - (<tt>Object</tt>) <strong>fixed_toggled</strong>(model, path_str) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 58</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fixed_toggled'>fixed_toggled</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path_str'>path_str</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreePath</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_path_str'>path_str</span><span class='rparen'>)</span>
+
+    <span class='comment'># get toggled iter
+</span>    <span class='id identifier rubyid_iter'>iter</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_get_iter'>get_iter</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fixed'>fixed</span> <span class='op'>=</span><span class='id identifier rubyid_iter'>iter</span><span class='lbracket'>[</span><span class='const'>COLUMN_CHECK</span><span class='rbracket'>]</span>
+    <span class='comment'># do something with the value
+</span>    <span class='id identifier rubyid_fixed'>fixed</span> <span class='op'>^=</span> <span class='int'>1</span>
+    <span class='comment'># set new value
+</span>    <span class='id identifier rubyid_iter'>iter</span><span class='lbracket'>[</span><span class='const'>COLUMN_CHECK</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_fixed'>fixed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="fixed_toggled_vpp-instance_method">
+  
+    - (<tt>Object</tt>) <strong>fixed_toggled_vpp</strong>(model, path_str, model_other) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 71</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_fixed_toggled_vpp'>fixed_toggled_vpp</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='comma'>,</span> <span class='id identifier rubyid_path_str'>path_str</span><span class='comma'>,</span><span class='id identifier rubyid_model_other'>model_other</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_path'>path</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreePath</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_path_str'>path_str</span><span class='rparen'>)</span>
+    <span class='comment'># get toggled iter
+</span>    <span class='id identifier rubyid_iter'>iter</span> <span class='op'>=</span> <span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_get_iter'>get_iter</span><span class='lparen'>(</span><span class='id identifier rubyid_path'>path</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_fixed'>fixed</span> <span class='op'>=</span> <span class='id identifier rubyid_iter'>iter</span><span class='lbracket'>[</span><span class='const'>COLUMN_CHECK</span><span class='rbracket'>]</span>
+    <span class='id identifier rubyid_model_other'>model_other</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span><span class='id identifier rubyid_p'>p</span><span class='comma'>,</span><span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_i'>i</span><span class='lbracket'>[</span><span class='const'>COLUMN_CHECK</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>false</span><span class='rbrace'>}</span>
+
+   <span class='comment'># iter2 =  model_other.get_iter(&quot;0&quot;)
+</span>
+    <span class='comment'>#iter2[COLUMN_CHECK] = false
+</span>    <span class='comment'># do something with the value
+</span>    <span class='id identifier rubyid_fixed'>fixed</span> <span class='op'>^=</span> <span class='int'>1</span>
+    <span class='comment'># set new value
+</span>    <span class='id identifier rubyid_iter'>iter</span><span class='lbracket'>[</span><span class='const'>COLUMN_CHECK</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='id identifier rubyid_fixed'>fixed</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="init_ui-instance_method">
+  
+    - (<tt>Object</tt>) <strong>init_ui</strong> 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 151</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_init_ui'>init_ui</span>
+    <span class='id identifier rubyid_table'>table</span>     <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Table</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='kw'>false</span>
+    <span class='id identifier rubyid_calendar'>calendar</span>  <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Calendar</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_button'>button</span>    <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Button</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Start</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_statusbar'>statusbar</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Statusbar</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_pbar'>pbar</span>      <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>ProgressBar</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+
+    <span class='id identifier rubyid_list_soa_d_meno_uno_mattina'>list_soa_d_meno_uno_mattina</span>       <span class='op'>=</span> <span class='id identifier rubyid_make_list'>make_list</span> <span class='const'>SOA_D_MENO_UNO_MATTINA</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>D-1 Mattina</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_list_soa_d_meno_uno_pomeriggio'>list_soa_d_meno_uno_pomeriggio</span>    <span class='op'>=</span> <span class='id identifier rubyid_make_list'>make_list</span> <span class='const'>SOA_D_MENO_UNO_POMERIGGIO</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>D-1 Pomeriggio</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_list_soa_d'>list_soa_d</span>                        <span class='op'>=</span> <span class='id identifier rubyid_make_list'>make_list</span> <span class='const'>SOA_D</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>D</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span><span class='kw'>nil</span>
+    <span class='id identifier rubyid_list_vpp'>list_vpp</span>                          <span class='op'>=</span> <span class='id identifier rubyid_make_list'>make_list</span> <span class='const'>VPP</span><span class='comma'>,</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Vpp</span><span class='tstring_end'>&quot;</span></span><span class='comma'>,</span> <span class='lbracket'>[</span><span class='id identifier rubyid_list_soa_d_meno_uno_mattina'>list_soa_d_meno_uno_mattina</span><span class='comma'>,</span><span class='id identifier rubyid_list_soa_d_meno_uno_pomeriggio'>list_soa_d_meno_uno_pomeriggio</span><span class='comma'>,</span><span class='id identifier rubyid_list_soa_d'>list_soa_d</span><span class='rbracket'>]</span>
+
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_set_column_spacings'>set_column_spacings</span> <span class='int'>4</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_set_border_width'>set_border_width</span> <span class='int'>4</span>
+
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_calendar'>calendar</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>VSeparator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_list_soa_d_meno_uno_mattina'>list_soa_d_meno_uno_mattina</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_list_soa_d_meno_uno_pomeriggio'>list_soa_d_meno_uno_pomeriggio</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_list_soa_d'>list_soa_d</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_list_vpp'>list_vpp</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>HSeparator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>1</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_button'>button</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>2</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>5</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>HSeparator</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>3</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_pbar'>pbar</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>4</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>EXPAND</span><span class='op'>|</span><span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_table'>table</span><span class='period'>.</span><span class='id identifier rubyid_attach'>attach</span><span class='lparen'>(</span><span class='id identifier rubyid_statusbar'>statusbar</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>7</span><span class='comma'>,</span> <span class='int'>5</span><span class='comma'>,</span> <span class='int'>6</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>FILL</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='int'>4</span><span class='rparen'>)</span>
+
+    <span class='id identifier rubyid_add'>add</span> <span class='id identifier rubyid_table'>table</span>
+
+
+    <span class='id identifier rubyid_button'>button</span><span class='period'>.</span><span class='id identifier rubyid_signal_connect'>signal_connect</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>clicked</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='lbrace'>{</span>
+        <span class='id identifier rubyid_data'>data</span>        <span class='op'>=</span> <span class='id identifier rubyid_calendar'>calendar</span><span class='period'>.</span><span class='id identifier rubyid_date'>date</span>
+        <span class='id identifier rubyid_lista_soa'>lista_soa</span>         <span class='op'>=</span> <span class='lbrace'>{</span><span class='rbrace'>}</span>
+        <span class='id identifier rubyid_list_soa_d_meno_uno_mattina'>list_soa_d_meno_uno_mattina</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>         <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>        <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span>
+        <span class='id identifier rubyid_list_soa_d_meno_uno_pomeriggio'>list_soa_d_meno_uno_pomeriggio</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>      <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>        <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span>
+        <span class='id identifier rubyid_list_soa_d'>list_soa_d</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>                          <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>        <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span>
+        <span class='id identifier rubyid_list_vpp'>list_vpp</span><span class='period'>.</span><span class='id identifier rubyid_child'>child</span><span class='period'>.</span><span class='id identifier rubyid_model'>model</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span>                            <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_m'>m</span><span class='comma'>,</span> <span class='id identifier rubyid_p'>p</span><span class='comma'>,</span> <span class='id identifier rubyid_i'>i</span><span class='op'>|</span>  <span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='lbracket'>[</span><span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>1</span><span class='rparen'>)</span><span class='rbracket'>]</span> <span class='op'>=</span> <span class='kw'>nil</span>        <span class='kw'>if</span> <span class='id identifier rubyid_i'>i</span><span class='period'>.</span><span class='id identifier rubyid_get_value'>get_value</span><span class='lparen'>(</span><span class='int'>0</span><span class='rparen'>)</span> <span class='kw'>end</span>
+        <span class='comment'># Disabilito il bottone start
+</span>        <span class='id identifier rubyid_button'>button</span><span class='period'>.</span><span class='id identifier rubyid_sensitive'>sensitive</span> <span class='op'>=</span> <span class='kw'>false</span><span class='semicolon'>;</span>
+
+
+        <span class='comment'># Istanzio Download e avvio il mio programma
+</span>        <span class='comment'># lista_soa = &quot;{\&quot;Autorizzazioni\&quot;=&gt;nil, \&quot;MGP_Validate\&quot;=&gt;nil, \&quot;MGP_Esitate\&quot;=&gt;nil, \&quot;Estero_Validate\&quot;=&gt;nil, \&quot;Estero_Esitate\&quot;=&gt;nil}&quot;
+</span>        <span class='id identifier rubyid_soa'>soa</span> <span class='op'>=</span> <span class='const'>Avvio</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_data'>data</span><span class='comma'>,</span><span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='rparen'>)</span>
+        <span class='kw'>if</span> <span class='id identifier rubyid_lista_soa'>lista_soa</span><span class='period'>.</span><span class='id identifier rubyid_has_key?'>has_key?</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Vpp</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+         <span class='id identifier rubyid_soa'>soa</span><span class='period'>.</span><span class='id identifier rubyid_start_vpp'>start_vpp</span><span class='lparen'>(</span><span class='id identifier rubyid_button'>button</span><span class='comma'>,</span><span class='id identifier rubyid_pbar'>pbar</span><span class='comma'>,</span><span class='id identifier rubyid_statusbar'>statusbar</span><span class='comma'>,</span><span class='kw'>self</span><span class='rparen'>)</span>
+        <span class='kw'>else</span>
+         <span class='id identifier rubyid_soa'>soa</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span><span class='lparen'>(</span><span class='id identifier rubyid_button'>button</span><span class='comma'>,</span><span class='id identifier rubyid_pbar'>pbar</span><span class='comma'>,</span><span class='id identifier rubyid_statusbar'>statusbar</span><span class='comma'>,</span><span class='kw'>self</span><span class='rparen'>)</span>
+        <span class='kw'>end</span>
+
+    <span class='rbrace'>}</span>
+
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+      <div class="method_details ">
+  <h3 class="signature " id="make_list-instance_method">
+  
+    - (<tt>Object</tt>) <strong>make_list</strong>(data, header, list_soa) 
+  
+
+  
+
+  
+</h3><table class="source_code">
+  <tr>
+    <td>
+      <pre class="lines">
+
+
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149</pre>
+    </td>
+    <td>
+      <pre class="code"><span class="info file"># File 'lib/gui.rb', line 136</span>
+
+<span class='kw'>def</span> <span class='id identifier rubyid_make_list'>make_list</span> <span class='id identifier rubyid_data'>data</span><span class='comma'>,</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span><span class='id identifier rubyid_list_soa'>list_soa</span>
+    <span class='comment'># create tree model
+</span>    <span class='id identifier rubyid_model'>model</span> <span class='op'>=</span> <span class='id identifier rubyid_create_model'>create_model</span> <span class='id identifier rubyid_data'>data</span>
+    <span class='comment'># create tree view
+</span>    <span class='id identifier rubyid_treeview'>treeview</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>TreeView</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='id identifier rubyid_model'>model</span><span class='rparen'>)</span>
+    <span class='comment'># colore righe alternato
+</span>    <span class='id identifier rubyid_treeview'>treeview</span><span class='period'>.</span><span class='id identifier rubyid_rules_hint'>rules_hint</span> <span class='op'>=</span> <span class='kw'>true</span>
+    <span class='comment'># add columns to the tree view
+</span>    <span class='id identifier rubyid_add_columns'>add_columns</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='comma'>,</span><span class='id identifier rubyid_header'>header</span><span class='comma'>,</span><span class='id identifier rubyid_list_soa'>list_soa</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_frame'>frame</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Frame</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span>
+    <span class='id identifier rubyid_frame'>frame</span><span class='period'>.</span><span class='id identifier rubyid_shadow_type'>shadow_type</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>SHADOW_OUT</span>
+    <span class='id identifier rubyid_frame'>frame</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_treeview'>treeview</span><span class='rparen'>)</span>
+    <span class='id identifier rubyid_frame'>frame</span>
+<span class='kw'>end</span></pre>
+    </td>
+  </tr>
+</table>
+</div>
+    
+  </div>
+
+</div>
+
+    <div id="footer">
+  Generated on Sat Nov 22 19:18:31 2014 by
+  <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
+  0.8.7.6 (ruby-2.1.5).
+</div>
+
+  </body>
+</html>

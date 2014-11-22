@@ -1,0 +1,114 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+Array	.\prove\prova_yml.rb	/^class Array$/;"	c
+Array	P:\Dropbox\progetti\20141114 - Soa\lib/prove/prova_yml.rb	/^class Array$/;"	c
+Avvio	.\avvio.rb	/^class Avvio$/;"	c
+Avvio	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^class Avvio$/;"	c
+CONF	P:\Dropbox\progetti\20141114 - Soa\lib/prove/prova_yml.rb	/^CONF=File.join(File.dirname(__FILE__), "settings.yml")$/;"	C	class:
+Ciao	.\prove\prova_rdoc.rb	/^class Ciao$/;"	c
+Ciao	P:\Dropbox\progetti\20141114 - Soa\lib/prove/prova_rdoc.rb	/^class Ciao$/;"	c
+Colonne	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^    Colonne = Struct.new('Colonne', :check, :description)$/;"	c	class:GuiSoa
+ExcelConst	.\avvio.rb	/^module ExcelConst end$/;"	m
+ExcelConst	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^module ExcelConst end$/;"	m
+GuiSoa	.\gui.rb	/^class GuiSoa < Gtk::Window$/;"	c
+GuiSoa	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^class GuiSoa < Gtk::Window$/;"	c	inherits:Gtk.Window
+NumeroToMese	.\utility.rb	/^def NumeroToMese(mese)$/;"	f
+NumeroToMese	P:\Dropbox\progetti\20141114 - Soa\lib/utility.rb	/^def NumeroToMese(mese)$/;"	f	class:Object
+SOA_D	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^      SOA_D = [$/;"	C	class:GuiSoa
+SOA_D_MENO_UNO_MATTINA	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^    SOA_D_MENO_UNO_MATTINA = [$/;"	C	class:GuiSoa
+SOA_D_MENO_UNO_POMERIGGIO	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^    SOA_D_MENO_UNO_POMERIGGIO = [$/;"	C	class:GuiSoa
+Soa	.\soa.rb	/^class Soa $/;"	c
+Soa	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^class Soa $/;"	c
+VPP	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^     VPP = [$/;"	C	class:GuiSoa
+add_columns	.\gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f
+add_columns	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f	class:GuiSoa
+avanzamento_progress_bar	.\avvio.rb	/^   def avanzamento_progress_bar(nome_step)$/;"	f	class:Avvio
+avanzamento_progress_bar	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def avanzamento_progress_bar(nome_step)$/;"	f	class:Avvio
+button	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+button=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+controRev	.\soa.rb	/^   def controRev(file)$/;"	f
+controRev	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def controRev(file)$/;"	f	class:Soa
+controlloRev	.\utility.rb	/^def controlloRev(path,inputfile)$/;"	f
+controlloRev	P:\Dropbox\progetti\20141114 - Soa\lib/utility.rb	/^def controlloRev(path,inputfile)$/;"	f	class:Object
+crea_soa	.\avvio.rb	/^   def crea_soa$/;"	f	class:Avvio
+crea_soa	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def crea_soa$/;"	f	class:Avvio
+crea_zip	.\soa.rb	/^   def crea_zip$/;"	f
+crea_zip	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def crea_zip$/;"	f	class:Soa
+create_model	.\gui.rb	/^        def create_model data$/;"	f
+create_model	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def create_model data$/;"	f	class:GuiSoa
+data	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+data	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+data=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+data=	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+errore	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+errore=	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+errori	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+errori=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+file	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+file=	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+finalizze_application	.\avvio.rb	/^   def finalizze_application()$/;"	f	class:Avvio
+finalizze_application	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def finalizze_application()$/;"	f	class:Avvio
+fixed_toggled	.\gui.rb	/^        def fixed_toggled(model, path_str)$/;"	f
+fixed_toggled	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def fixed_toggled(model, path_str)$/;"	f	class:GuiSoa
+fixed_toggled_vpp	.\gui.rb	/^        def fixed_toggled_vpp(model, path_str,model_other)$/;"	f
+fixed_toggled_vpp	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def fixed_toggled_vpp(model, path_str,model_other)$/;"	f	class:GuiSoa
+init_gui	.\avvio.rb	/^   def init_gui$/;"	f	class:Avvio
+init_gui	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def init_gui$/;"	f	class:Avvio
+init_ui	.\gui.rb	/^        def init_ui$/;"	f
+init_ui	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def init_ui$/;"	f	class:GuiSoa
+initialize	.\avvio.rb	/^   def initialize(data,soa)$/;"	f	class:Avvio
+initialize	.\gui.rb	/^        def initialize$/;"	f	class:GuiSoa
+initialize	.\soa.rb	/^   def initialize(nome)$/;"	f	class:Soa
+initialize	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def initialize(data,soa)$/;"	f	class:Avvio
+initialize	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def initialize$/;"	f	class:GuiSoa
+initialize	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def initialize(nome)$/;"	f	class:Soa
+initialize_global_variable	.\avvio.rb	/^   def initialize_global_variable$/;"	f	class:Avvio
+initialize_global_variable	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def initialize_global_variable$/;"	f	class:Avvio
+inizializza_path	.\soa.rb	/^   def inizializza_path$/;"	f	class:Soa
+inizializza_path	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def inizializza_path$/;"	f	class:Soa
+iniziallizza_global_data	.\avvio.rb	/^   def iniziallizza_global_data()$/;"	f	class:Avvio
+iniziallizza_global_data	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def iniziallizza_global_data()$/;"	f	class:Avvio
+iniziallizza_global_setting	.\avvio.rb	/^   def iniziallizza_global_setting()$/;"	f	class:Avvio
+iniziallizza_global_setting	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def iniziallizza_global_setting()$/;"	f	class:Avvio
+lista_file	.\soa.rb	/^   def lista_file$/;"	f	class:Soa
+lista_file	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def lista_file$/;"	f	class:Soa
+make_list	.\gui.rb	/^        def make_list data,header,list_soa$/;"	f
+make_list	P:\Dropbox\progetti\20141114 - Soa\lib/gui.rb	/^        def make_list data,header,list_soa$/;"	f	class:GuiSoa
+nome_controllo	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+nome_controllo=	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+parent	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+parent=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+parse_path	.\prove\prova_yml.rb	/^   def parse_path()$/;"	f	class:Array
+parse_path	P:\Dropbox\progetti\20141114 - Soa\lib/prove/prova_yml.rb	/^   def parse_path()$/;"	f	class:Array
+partial_progress	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+partial_progress=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+path_file_zip	.\soa.rb	/^   def path_file_zip $/;"	f	class:Soa
+path_file_zip	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def path_file_zip $/;"	f	class:Soa
+progress	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+progress=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+soa	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+soa=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+start	.\avvio.rb	/^   def start(button, progress,statusbar,parent)$/;"	f	class:Avvio
+start	.\prove\prova_rdoc.rb	/^   def start(url, browser = :firefox, *args)$/;"	f	class:Ciao
+start	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def start(button, progress,statusbar,parent)$/;"	f	class:Avvio
+start	P:\Dropbox\progetti\20141114 - Soa\lib/prove/prova_rdoc.rb	/^   def start(url, browser = :firefox, *args)$/;"	f	class:Ciao
+start_vpp	.\avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	class:Avvio
+start_vpp	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	class:Avvio
+start_win_error	.\avvio.rb	/^   def start_win_error$/;"	f	class:Avvio
+start_win_error	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   def start_win_error$/;"	f	class:Avvio
+statusbar	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+statusbar=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+trova_email_autorizzazione	.\soa.rb	/^   def trova_email_autorizzazione$/;"	f	class:Soa
+trova_email_autorizzazione	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def trova_email_autorizzazione$/;"	f	class:Soa
+trova_file	.\soa.rb	/^   def trova_file(files)$/;"	f
+trova_file	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   def trova_file(files)$/;"	f	class:Soa
+zip	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+zip	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa
+zip=	P:\Dropbox\progetti\20141114 - Soa\lib/avvio.rb	/^   attr_accessor :zip,:errori, :soa, :data, :button, :progress, :statusbar, :parent, :partial_progress$/;"	f	class:Avvio
+zip=	P:\Dropbox\progetti\20141114 - Soa\lib/soa.rb	/^   attr_accessor :nome_controllo, :data, :zip, :file, :errore$/;"	f	class:Soa

@@ -4,24 +4,26 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-Array	.\lib\prova.rb	/^class Array$/;"	c
+Array	.\lib\prove\prova_yml.rb	/^class Array$/;"	c
 Avvio	.\lib\avvio.rb	/^class Avvio$/;"	c
+Ciao	.\lib\prove\prova_rdoc.rb	/^class Ciao$/;"	c
 ExcelConst	.\lib\avvio.rb	/^module ExcelConst end$/;"	m
 GuiSoa	.\lib\gui.rb	/^class GuiSoa < Gtk::Window$/;"	c
 NumeroToMese	.\lib\utility.rb	/^def NumeroToMese(mese)$/;"	f
 Soa	.\lib\soa.rb	/^class Soa $/;"	c
 add_columns	.\lib\gui.rb	/^        def add_columns(treeview,header,list_soa)$/;"	f
-avanzamento_progress_bar	.\lib\avvio.rb	/^   def avanzamento_progress_bar(progress,statusbar,k)$/;"	f	class:Avvio
-controRev	.\lib\soa.rb	/^   def controRev(file)$/;"	f	class:Soa
+avanzamento_progress_bar	.\lib\avvio.rb	/^   def avanzamento_progress_bar(nome_step)$/;"	f	class:Avvio
+controRev	.\lib\soa.rb	/^   def controRev(file)$/;"	f
 controlloRev	.\lib\utility.rb	/^def controlloRev(path,inputfile)$/;"	f
-crea_zip	.\lib\avvio.rb	/^   def crea_zip zip$/;"	f	class:Avvio
-crea_zip	.\lib\soa.rb	/^   def crea_zip$/;"	f	class:Soa
+crea_soa	.\lib\avvio.rb	/^   def crea_soa$/;"	f	class:Avvio
+crea_zip	.\lib\soa.rb	/^   def crea_zip$/;"	f
 create_model	.\lib\gui.rb	/^        def create_model data$/;"	f
-finalizze_application	.\lib\avvio.rb	/^   def finalizze_application(button,statusbar,progress,parent)$/;"	f	class:Avvio
+finalizze_application	.\lib\avvio.rb	/^   def finalizze_application()$/;"	f	class:Avvio
 fixed_toggled_vpp	.\lib\gui.rb	/^        def fixed_toggled_vpp(model, path_str,model_other)$/;"	f
 fixed_toggled	.\lib\gui.rb	/^        def fixed_toggled(model, path_str)$/;"	f
+init_gui	.\lib\avvio.rb	/^   def init_gui$/;"	f	class:Avvio
 init_ui	.\lib\gui.rb	/^        def init_ui$/;"	f
-init	.\lib\avvio.rb	/^   def init(progress,statusbar, step)$/;"	f	class:Avvio
+initialize_global_variable	.\lib\avvio.rb	/^   def initialize_global_variable$/;"	f	class:Avvio
 initialize	.\lib\avvio.rb	/^   def initialize(data,soa)$/;"	f	class:Avvio
 initialize	.\lib\gui.rb	/^        def initialize$/;"	f	class:GuiSoa
 initialize	.\lib\soa.rb	/^   def initialize(nome)$/;"	f	class:Soa
@@ -30,12 +32,11 @@ iniziallizza_global_data	.\lib\avvio.rb	/^   def iniziallizza_global_data()$/;"	
 iniziallizza_global_setting	.\lib\avvio.rb	/^   def iniziallizza_global_setting()$/;"	f	class:Avvio
 lista_file	.\lib\soa.rb	/^   def lista_file$/;"	f	class:Soa
 make_list	.\lib\gui.rb	/^        def make_list data,header,list_soa$/;"	f
-parse_path	.\lib\prova.rb	/^   def parse_path()$/;"	f	class:Array
+parse_path	.\lib\prove\prova_yml.rb	/^   def parse_path()$/;"	f	class:Array
 path_file_zip	.\lib\soa.rb	/^   def path_file_zip $/;"	f	class:Soa
-start_excel	.\lib\avvio.rb	/^   def start_excel$/;"	f	class:Avvio
 start_vpp	.\lib\avvio.rb	/^   def start_vpp(button, progress, statusbar, parent)$/;"	f	class:Avvio
 start_win_error	.\lib\avvio.rb	/^   def start_win_error$/;"	f	class:Avvio
-start_word	.\lib\avvio.rb	/^   def start_word$/;"	f	class:Avvio
 start	.\lib\avvio.rb	/^   def start(button, progress,statusbar,parent)$/;"	f	class:Avvio
+start	.\lib\prove\prova_rdoc.rb	/^   def start(url, browser = :firefox, *args)$/;"	f	class:Ciao
 trova_email_autorizzazione	.\lib\soa.rb	/^   def trova_email_autorizzazione$/;"	f	class:Soa
-trova_file	.\lib\soa.rb	/^   def trova_file(files)$/;"	f	class:Soa
+trova_file	.\lib\soa.rb	/^   def trova_file(files)$/;"	f
