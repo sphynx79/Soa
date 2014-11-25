@@ -53,6 +53,7 @@ class Avvio
    # Inizializzo le variabili globali per le date 
    #
    def iniziallizza_global_data
+      $data          = @data  
       $year          = data.strftime("%Y")
       $year_short    = data.strftime("%y")
       $month         = data.strftime("%m")
@@ -202,4 +203,9 @@ class Avvio
 
 end
 
+class Controlli
 
+
+
+   
+end

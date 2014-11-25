@@ -1,4 +1,6 @@
 require File.join(File.dirname(__FILE__), 'utility.rb')
+require_relative 'mapi/msg'
+TMP_FOLDER =  File.dirname(__FILE__)+"/tmp/"
 
 class Soa 
    attr_accessor :nome_controllo, :data, :zip, :file, :errore
@@ -9,11 +11,20 @@ class Soa
       @errore          = Hash.new
    end
 
+   #
+   # Inizializzo i path dove mettere il file zip, e dove sono
+   # tutti i file da inserire dentro lo zip
+   #
    def inizializza_path
       path_file_zip 
       lista_file
+      check_file
    end
 
+   # Cerco l'e-mail delle autorizzazioni, se non le trova inserisco l'errore nella variabile d'istanza [Hash] @errore
+   #
+   # @return [Array<Pathname>] contenente i path delle mie autorizzazioni
+   #
    def trova_email_autorizzazione
       #TODO: inserire il controllo di inizzio validita e fine validita
       email = Array.new
@@ -50,6 +61,11 @@ class Soa
       return email
    end
 
+   #
+   # Inizializzo il path dove mettere il file zip
+   #
+   # @todo inserire i path degli zip dentro il file setting.yml
+   #
    def path_file_zip 
       case nome_controllo
       when "Autorizzazioni"    then @zip = Pathname.new("#{$F}PROGRAMMAZIONE #{$year}/ITALIA/Report/SOA Italia/File Zip/#{$day} #{$monthtext} #{$year}_0.zip")
@@ -68,6 +84,10 @@ class Soa
       end
    end
 
+   #
+   # Prendo dalla variabile globale $settings i path dove si trovano i file
+   # e attravero la chiamata a {#trova_file} cerco tutti i file che mi servono
+   #
    def lista_file
       files = case nome_controllo
               when "Autorizzazioni"      then nil 
@@ -86,6 +106,20 @@ class Soa
       trova_file(files)
    end
 
+   #
+   # Inserisco dentro la variabile d'istanza @file l'ultima versione dei file che mi servono
+   # 1. Scorro la lista dei file da inserire 
+   # 2. Cerco l'ultima versione del file disponibile
+   # 3. Se lo trova lo inserisce nella variabile d'istanza [Array] @file,
+   #    altrimente scrive l'errore nella variabile d'istanza [Hash] @errore 
+   # 4. Cerca l'e-mail delle autorizzazioni e le inserisce dentro @file
+   #
+   # @example
+   #     @file   = ["[#<Pathname:C:/PROGRAMMAZIONE 2014/ITALIA/Report/SOA Italia/Validate/Validate_Eni_09112014.xls>,#<Pathname:C:/MEOR/PROGRAMMAZIONE 2014/Controllo Prezzi MGP/Prezzi_Offerte_MGP_1.1_09112014.xls>]
+   #     @errore = {"01_AutorizzazioneEpexCH_ENI_20141109.xls" => "File non trovato nella directory ....."}
+   #
+   # @param [Array] files Lista file da inserire nello zip
+   # 
    def trova_file(files)
       if files != nil
          files.each do |file|
@@ -101,6 +135,13 @@ class Soa
       email.each{|f| @file << f} unless email.empty?      
    end
 
+   #
+   # Cerco l'ultima versione del file disponibile
+   # @param [String] file path del file da cercare 
+   # 
+   # @return [Pathname] se trova il file che mi server
+   # @return [false] se non trova il file che mi interessa
+   #
    def controRev(file)
       pathname = Pathname.new(file)
       if (pathname.sub(".xls","_rev2.xls")).exist?
@@ -114,6 +155,13 @@ class Soa
       end
    end
 
+   # Mi cre il file zip e ci mette tutti i file che ha trovato
+   # 1. Cancello il file zip se già presente
+   # 2. Creo lo zip
+   # 3. Controllo se il nome del file contiene ProgrFisica_
+   # 4. Se si, controllo se sono validate o esitate e creo la cartella dntro lo zip se non presente
+   # 5. Altrimenti inserisco il file nello zip
+   #
    def crea_zip
       @zip.delete if @zip.exist?
       Zip::File.open(@zip, Zip::File::CREATE) do |zf|
@@ -132,6 +180,39 @@ class Soa
          end
       end
    end
+
+   def check_file
+      @file.each do |f| 
+         file = f.to_s
+         case file
+         when /Verbale autorizzativo/ then check_verbale(estrai_allegato(file))
+         else
+
+         end
+
+
+      end
+   end
+
+   def check_verbale(allegato)
+
+      s = Roo::Excelx.new(allegato)
+      sheet = s.sheet(0)
+      unless $data.between? (sheet.row(9)[1]),(sheet.row(10)[1])
+          errore[Pathname.new(allegato).basename] = "Il giorno selezionato non rietra tra le date presenti nel verbale #{Pathname.new(allegato).basename}"
+      end
+   
+
+   end
+
+   # Estra gli allegati dalle e-mail
+   def estrai_allegato(file)
+      msg = Mapi::Msg.open(file)
+      allegato = msg.attachments.find { |h| (h.filename).match("xlsx")}
+      allegato.save open(TMP_FOLDER+ "/"+ File.basename(allegato.filename), 'wb') 
+      return TMP_FOLDER+ "/"+ File.basename(allegato.filename)
+   end
+
 
 end
 

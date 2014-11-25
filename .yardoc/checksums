@@ -1,7 +1,8 @@
 lib/gui.rb de498ab3ccde0bc80fc5fc0de8dbc04e555cd908
-lib/soa.rb 16bebaf9c952ee1f1b84fb51542dc43e718b10b0
+lib/soa.rb c4b92a306dc4ee55f8d75b2949f31846a62c286c
 lib/avvio.rb 4f0f643372285540c475af761f8a0742a09b8e69
 lib/utility.rb 834c740576329b32ffca46edff9e79f3a5165dcd
+lib/prove/prova.rb 207fc92df4d9d2a21c29714456557a22eb665566
 lib/prove/prova_yml.rb b5afc7c6039eca0f99f041d783b79d13229e523a
-lib/prove/prova_rdoc.rb e8feb70e0e10e5b4c12163fae9f64dc3543af114
+lib/prove/prova_rdoc.rb 09f427cdf5206ea324dff5956adb3d448229e65f
 lib/prove/prova_varie.rb fdc6def41bb477edc91d372782735d7f2ae43ced

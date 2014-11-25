@@ -17,4 +17,12 @@ class Ciao
       b
    end
 end
+class MyWebServer
+  # Handles a request
+  # @param request [Request] the request object
+  # @return [String] the resulting webpage
+  def get(request) "hello" end
 
+  # (see #get)
+  def post(request) "hello" end
+end
