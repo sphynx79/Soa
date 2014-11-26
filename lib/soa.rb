@@ -155,6 +155,7 @@ class Soa
       end
    end
 
+   #
    # Mi cre il file zip e ci mette tutti i file che ha trovato
    # 1. Cancello il file zip se già presente
    # 2. Creo lo zip
@@ -189,27 +190,37 @@ class Soa
          else
 
          end
-
-
       end
    end
 
+   #
+   # Controllo le date dei verbali
+   #
+   # @param [String] allegato path del file excel del verbale
+   # 
    def check_verbale(allegato)
-
-      s = Roo::Excelx.new(allegato)
-      sheet = s.sheet(0)
+      Roo::Excelx.new(allegato){|s|
+            sheet = s.sheet(0)
       unless $data.between? (sheet.row(9)[1]),(sheet.row(10)[1])
           errore[Pathname.new(allegato).basename] = "Il giorno selezionato non rietra tra le date presenti nel verbale #{Pathname.new(allegato).basename}"
       end
-   
+      }
 
+      File.delete(allegato) if File.exist?(allegato)
    end
 
+   #
    # Estra gli allegati dalle e-mail
-   def estrai_allegato(file)
-      msg = Mapi::Msg.open(file)
+   #
+   # @param [String] email del verbale da voce estrarre l'allegato
+   # @return [sting] path del file excel estratto
+   #
+   def estrai_allegato(email)
+      msg = Mapi::Msg.open(email)
       allegato = msg.attachments.find { |h| (h.filename).match("xlsx")}
-      allegato.save open(TMP_FOLDER+ "/"+ File.basename(allegato.filename), 'wb') 
+      tmp_file = open(TMP_FOLDER+ "/"+ File.basename(allegato.filename), 'wb') 
+      allegato.save tmp_file
+      tmp_file.close
       return TMP_FOLDER+ "/"+ File.basename(allegato.filename)
    end
 

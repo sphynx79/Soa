@@ -1,8 +1,0 @@
----
-- :username: gls
-  :shell:
-  - tcsh
-  - bash
-- :username: root
-  :shell:
-  - csh
