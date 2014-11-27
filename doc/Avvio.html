@@ -1089,7 +1089,6 @@ lo step un cui mi trovo</p>
       <pre class="lines">
 
 
-122
 123
 124
 125
@@ -1097,10 +1096,11 @@ lo step un cui mi trovo</p>
 127
 128
 129
-130</pre>
+130
+131</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 122</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 123</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_avanzamento_progress_bar'>avanzamento_progress_bar</span><span class='lparen'>(</span><span class='id identifier rubyid_nome_step'>nome_step</span><span class='rparen'>)</span>
    <span class='id identifier rubyid_statusbar'>statusbar</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_nome_step'>nome_step</span><span class='embexpr_end'>}</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1149,7 +1149,6 @@ lo step un cui mi trovo</p>
       <pre class="lines">
 
 
-107
 108
 109
 110
@@ -1159,10 +1158,11 @@ lo step un cui mi trovo</p>
 114
 115
 116
-117</pre>
+117
+118</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 107</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 108</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_crea_soa'>crea_soa</span>
    <span class='id identifier rubyid_soa'>soa</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span> <span class='kw'>do</span> <span class='op'>|</span><span class='id identifier rubyid_nome_soa'>nome_soa</span><span class='comma'>,</span><span class='id identifier rubyid_obj_soa'>obj_soa</span><span class='op'>|</span>
@@ -1211,7 +1211,6 @@ lo step un cui mi trovo</p>
       <pre class="lines">
 
 
-139
 140
 141
 142
@@ -1224,10 +1223,11 @@ lo step un cui mi trovo</p>
 149
 150
 151
-152</pre>
+152
+153</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 139</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 140</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_finalizze_application'>finalizze_application</span>
    <span class='const'>GC</span><span class='period'>.</span><span class='id identifier rubyid_start'>start</span>
@@ -1275,7 +1275,6 @@ compiuti</p>
       <pre class="lines">
 
 
-87
 88
 89
 90
@@ -1284,10 +1283,11 @@ compiuti</p>
 93
 94
 95
-96</pre>
+96
+97</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 87</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 88</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_init_gui'>init_gui</span>
    <span class='id identifier rubyid_statusbar'>statusbar</span><span class='period'>.</span><span class='id identifier rubyid_push'>push</span><span class='lparen'>(</span><span class='int'>1</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>Avvio</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1380,12 +1380,14 @@ compiuti</p>
 59
 60
 61
-62</pre>
+62
+63</pre>
     </td>
     <td>
       <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 55</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_iniziallizza_global_data'>iniziallizza_global_data</span>
+   <span class='gvar'>$data</span>          <span class='op'>=</span> <span class='ivar'>@data</span>  
    <span class='gvar'>$year</span>          <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%Y</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
    <span class='gvar'>$year_short</span>    <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%y</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
    <span class='gvar'>$month</span>         <span class='op'>=</span> <span class='id identifier rubyid_data'>data</span><span class='period'>.</span><span class='id identifier rubyid_strftime'>strftime</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>%m</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
@@ -1424,7 +1426,6 @@ compiuti</p>
       <pre class="lines">
 
 
-67
 68
 69
 70
@@ -1439,10 +1440,11 @@ compiuti</p>
 79
 80
 81
-82</pre>
+82
+83</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 67</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 68</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_iniziallizza_global_setting'>iniziallizza_global_setting</span><span class='lparen'>(</span><span class='rparen'>)</span>
    <span class='gvar'>$settings</span> <span class='op'>=</span> <span class='const'>YAML</span><span class='op'>::</span><span class='id identifier rubyid_load_file'>load_file</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_join'>join</span><span class='lparen'>(</span><span class='const'>File</span><span class='period'>.</span><span class='id identifier rubyid_dirname'>dirname</span><span class='lparen'>(</span><span class='kw'>__FILE__</span><span class='rparen'>)</span><span class='comma'>,</span> <span class='tstring'><span class='tstring_beg'>&quot;</span><span class='tstring_content'>settings.yml</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span><span class='rparen'>)</span>
@@ -1599,7 +1601,6 @@ compiuti</p>
       <pre class="lines">
 
 
-157
 158
 159
 160
@@ -1643,10 +1644,11 @@ compiuti</p>
 198
 199
 200
-201</pre>
+201
+202</pre>
     </td>
     <td>
-      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 157</span>
+      <pre class="code"><span class="info file"># File 'lib/avvio.rb', line 158</span>
 
 <span class='kw'>def</span> <span class='id identifier rubyid_start_win_error'>start_win_error</span>
    <span class='id identifier rubyid_dialog'>dialog</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Dialog</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span>
@@ -1670,9 +1672,9 @@ compiuti</p>
       <span class='id identifier rubyid_label'>label</span><span class='period'>.</span><span class='id identifier rubyid_modify_font'>modify_font</span><span class='lparen'>(</span><span class='id identifier rubyid_initial_font'>initial_font</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_align'>align</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_label'>label</span><span class='rparen'>)</span>
       <span class='id identifier rubyid_vbox'>vbox</span><span class='period'>.</span><span class='id identifier rubyid_pack_start'>pack_start</span><span class='lparen'>(</span><span class='id identifier rubyid_align'>align</span><span class='rparen'>)</span>
-      <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_n'>n</span><span class='comma'>,</span><span class='id identifier rubyid_m'>m</span><span class='op'>|</span>
+      <span class='id identifier rubyid_v'>v</span><span class='period'>.</span><span class='id identifier rubyid_each'>each</span><span class='lbrace'>{</span><span class='op'>|</span><span class='id identifier rubyid_e'>e</span><span class='op'>|</span>
          <span class='comment'>#label1 =  Gtk::Label.new(&quot;#{n.to_s}: #{m.to_s}\n&quot;)
-</span>         <span class='id identifier rubyid_label1'>label1</span> <span class='op'>=</span>  <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_m'>m</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
+</span>         <span class='id identifier rubyid_label1'>label1</span> <span class='op'>=</span>  <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Label</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='tstring'><span class='tstring_beg'>&quot;</span><span class='embexpr_beg'>#{</span><span class='id identifier rubyid_e'>e</span><span class='period'>.</span><span class='id identifier rubyid_to_s'>to_s</span><span class='embexpr_end'>}</span><span class='tstring_content'>\n</span><span class='tstring_end'>&quot;</span></span><span class='rparen'>)</span>
          <span class='id identifier rubyid_align1'>align1</span> <span class='op'>=</span> <span class='const'>Gtk</span><span class='op'>::</span><span class='const'>Alignment</span><span class='period'>.</span><span class='id identifier rubyid_new'>new</span><span class='lparen'>(</span><span class='int'>0</span><span class='comma'>,</span> <span class='int'>0</span><span class='comma'>,</span> <span class='float'>0.0</span><span class='comma'>,</span> <span class='float'>0.0</span><span class='rparen'>)</span>
          <span class='id identifier rubyid_align1'>align1</span><span class='period'>.</span><span class='id identifier rubyid_left_padding'>left_padding</span><span class='op'>=</span><span class='int'>40</span>
          <span class='id identifier rubyid_align1'>align1</span><span class='period'>.</span><span class='id identifier rubyid_add'>add</span><span class='lparen'>(</span><span class='id identifier rubyid_label1'>label1</span><span class='rparen'>)</span>
@@ -1703,7 +1705,7 @@ compiuti</p>
 </div>
 
     <div id="footer">
-  Generated on Tue Nov 25 14:33:03 2014 by
+  Generated on Thu Nov 27 22:57:47 2014 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.8.7.6 (ruby-2.1.5).
 </div>

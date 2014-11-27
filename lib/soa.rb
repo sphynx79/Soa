@@ -144,15 +144,11 @@ class Soa
    #
    def controRev(file)
       pathname = Pathname.new(file)
-      ext = "xls"
-      if file.match("csv")
-         ext = "csv"
-      end
-
-      if (pathname.sub(".xls","_rev2.#{ext}")).exist?
-         return (pathname.sub(".xls","_rev2.#{ext}"))
-      elsif (pathname.sub(".xls","_rev1.#{ext}")).exist?
-         return (pathname.sub(".xls","_rev1.#{ext}"))
+      ext = pathname.extname
+      if (pathname.sub("#{ext}","_rev2#{ext}")).exist?
+         return (pathname.sub("#{ext}","_rev2#{ext}"))
+      elsif (pathname.sub("#{ext}","_rev1#{ext}")).exist?
+         return (pathname.sub("#{ext}","_rev1#{ext}"))
       elsif pathname.exist?
          return pathname
       else
@@ -199,7 +195,7 @@ class Soa
          when file.fnmatch("*Prezzi_Offerte*")            then check_controllo_offerte(file)
          when file.fnmatch("*Validate_Eni*")              then check_offerte(file)
          when file.fnmatch("*Esitate_Eni*")               then check_offerte(file)
-         #when file.fnmatch("*ProgrFisica*")               then check_offerte(file)
+         # when file.fnmatch("*ProgrFisica*")               then controllo_offerte_pce(file)
          else
 
          end
@@ -290,9 +286,9 @@ class Soa
 
       end
    end
-   
+
    def controllo_offerte_pce(offerte)
-   
+
 
 
 

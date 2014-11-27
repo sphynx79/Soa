@@ -1,8 +1,13 @@
 lib/gui.rb de498ab3ccde0bc80fc5fc0de8dbc04e555cd908
-lib/soa.rb c4b92a306dc4ee55f8d75b2949f31846a62c286c
-lib/avvio.rb 4f0f643372285540c475af761f8a0742a09b8e69
+lib/soa.rb 1954fa62441f02e8c35c8f6021636820f1c903ea
+lib/mapi.rb df86885fbc96333235158781ffaf17ae1f735527
+lib/avvio.rb d59c0420b0ef45034ba0bff708436b7c12e00c02
 lib/utility.rb 834c740576329b32ffca46edff9e79f3a5165dcd
-lib/prove/prova.rb 207fc92df4d9d2a21c29714456557a22eb665566
+lib/mapi/rtf.rb 8ccfc7fbc95c3b205c91e2ce66069d76c258befa
+lib/mapi/msg.rb 27cd49abe4ab28e0f17ba0127e2bdbf8869b0a99
+lib/mapi/types.rb cb47ee44044b082b4bb44d3e89ce078fbeca1e4d
+lib/prove/prova.rb 8d4c079d3d203e0a94c464d46df2dfffa614bb6b
 lib/prove/prova_yml.rb b5afc7c6039eca0f99f041d783b79d13229e523a
 lib/prove/prova_rdoc.rb 09f427cdf5206ea324dff5956adb3d448229e65f
+lib/mapi/property_set.rb ecd9603566226855bc2fded31dfbd7e9a782d3a1
 lib/prove/prova_varie.rb fdc6def41bb477edc91d372782735d7f2ae43ced
