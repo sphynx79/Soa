@@ -21,7 +21,7 @@ class Soa
       check_file
    end
 
-   # Cerco l'e-mail delle autorizzazioni, se non le trova inserisco l'errore nella variabile d'istanza [Hash] @errore
+   # Cerco l'e-mail delle autorizzazioni, se non le trova inserisco l'errore nella variabile d'istanza [Array] @errore
    #
    # @return [Array<Pathname>] contenente i path delle mie autorizzazioni
    #
@@ -111,12 +111,12 @@ class Soa
    # 1. Scorro la lista dei file da inserire 
    # 2. Cerco l'ultima versione del file disponibile
    # 3. Se lo trova lo inserisce nella variabile d'istanza [Array] @file,
-   #    altrimente scrive l'errore nella variabile d'istanza [Hash] @errore 
+   #    altrimente scrive l'errore nella variabile d'istanza [Array] @errore 
    # 4. Cerca l'e-mail delle autorizzazioni e le inserisce dentro @file
    #
    # @example
    #     @file   = ["[#<Pathname:C:/PROGRAMMAZIONE 2014/ITALIA/Report/SOA Italia/Validate/Validate_Eni_09112014.xls>,#<Pathname:C:/MEOR/PROGRAMMAZIONE 2014/Controllo Prezzi MGP/Prezzi_Offerte_MGP_1.1_09112014.xls>]
-   #     @errore = {"01_AutorizzazioneEpexCH_ENI_20141109.xls" => "File non trovato nella directory ....."}
+   #     @errore = ["01_AutorizzazioneEpexCH_ENI_20141109.xls" => "File non trovato nella directory ....."]
    #
    # @param [Array] files Lista file da inserire nello zip
    # 
@@ -226,15 +226,30 @@ class Soa
       return TMP_FOLDER+ "/"+ File.basename(allegato.filename)
    end
 
-
+   #
+   # Controllo se nella tabella del check offerte data e i controlli siano tutti OK
+   # 1. Apro il mio file
+   # 2. Selezioni il primo foglio
+   # 3. Metto in un array bidimensionale la mia tabellina dei check
+   # 4. Scorro la prima colonna della mia tabellina check
+   # 5. Se presente flusso controllo la data
+   # 6. Altrimenti controllo che il check sia OK
+   #
    def check_controllo_offerte(file_controlo)
-      s = Roo::Excel.new(file_controlo.to_s)
-      sheet = s.sheet(0)
-      unless (sheet.row(3)[1]) == $data
-         errore << "Nel file #{file_controlo.basename} c'è una data diversa da quella selezionata"
+      s                 = Roo::Excel.new(file_controlo.to_s)
+      sheet             = s.sheet(0)
+      tabella_controlli = [sheet.column(2),sheet.column(3)]
+      tabella_controlli[0].each_with_index do |x,y|
+         if x == "FLUSSO"
+            unless tabella_controlli[1][0] == $data
+               errore << "Nel file #{file_controlo.basename} c'è una data diversa da quella selezionata"
+            end
+         else
+            unless tabella_controlli[1][y] == "OK"
+               errore << "Nel file #{file_controlo.basename} il \"#{tabella_controlli[0][y]}\" non è OK"
+            end
+         end
       end
-
-
    end
 
 end

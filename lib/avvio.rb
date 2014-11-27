@@ -171,8 +171,6 @@ class Avvio
       vbox  =  Gtk::VBox.new(false,5)
       vbox.border_width = 10
       @errori.each{|k,v|
-         p k
-         p v
          align = Gtk::Alignment.new(0, 0, 0.0, 0.0)
          label  = Gtk::Label.new("#{k.to_s}:\n")
          initial_font = Pango::FontDescription.new("Sans Bold 10")
