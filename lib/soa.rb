@@ -144,10 +144,15 @@ class Soa
    #
    def controRev(file)
       pathname = Pathname.new(file)
-      if (pathname.sub(".xls","_rev2.xls")).exist?
-         return (pathname.sub(".xls","_rev2.xls"))
-      elsif (pathname.sub(".xls","_rev1.xls")).exist?
-         return (pathname.sub(".xls","_rev1.xls"))
+      ext = "xls"
+      if file.match("csv")
+         ext = "csv"
+      end
+
+      if (pathname.sub(".xls","_rev2.#{ext}")).exist?
+         return (pathname.sub(".xls","_rev2.#{ext}"))
+      elsif (pathname.sub(".xls","_rev1.#{ext}")).exist?
+         return (pathname.sub(".xls","_rev1.#{ext}"))
       elsif pathname.exist?
          return pathname
       else
@@ -192,6 +197,9 @@ class Soa
          case 
          when file.fnmatch("*Verbale autorizzativo*")     then check_verbale(estrai_allegato(file))
          when file.fnmatch("*Prezzi_Offerte*")            then check_controllo_offerte(file)
+         when file.fnmatch("*Validate_Eni*")              then check_offerte(file)
+         when file.fnmatch("*Esitate_Eni*")               then check_offerte(file)
+         #when file.fnmatch("*ProgrFisica*")               then check_offerte(file)
          else
 
          end
@@ -227,8 +235,10 @@ class Soa
    end
 
    #
-   # Controllo se nella tabella del check offerte data e i controlli siano tutti OK
-   # 1. Apro il mio file
+   # Controllo se nella tabella del check offerte data e che i controlli siano tutti OK
+   # lo fa sia per il controllo MGP sia per il controllo MI
+   #
+   # # 1. Apro il mio file
    # 2. Selezioni il primo foglio
    # 3. Metto in un array bidimensionale la mia tabellina dei check
    # 4. Scorro la prima colonna della mia tabellina check
@@ -250,6 +260,42 @@ class Soa
             end
          end
       end
+   end
+
+   #
+   # Controllo se le offerte MGP|MI scaricate hanno all'interno del file la data selezionata e
+   # le offerte presenti all'interno del file corrispondono al mercato presente nel nome del file
+   #
+   # # 1. Apro il mio file
+   # 2. Selezioni il primo foglio
+   # 3. Controllo se la data di inizio e di fine corrisponde alla data selezionata 
+   # 4. Controllo se il mercato presente all'interno del file corrisponde con quello del nome del file
+   #
+   def check_offerte(offerte)
+      s                 = Roo::Excel.new(offerte.to_s)
+      sheet             = s.sheet(0)
+      if  (sheet.cell("k",5) != "#{$day}/#{$month}/#{$year}") || (sheet.cell("k",7) != "#{$day}/#{$month}/#{$year}")
+         errore << "Data presente nel file #{offerte.basename} non corrisponde con la data selezionata"
+      end
+      mercato = ((offerte.basename.to_s).split("_").last).sub(".xls","")
+
+      if mercato.match("MI")
+         unless (sheet.cell("G",9)) == mercato
+            errore << "Nel file #{offerte.basename} non ci sono le offerte #{mercato}"
+         end
+      else
+         unless (sheet.cell("G",9)) == "MGP" 
+            errore << "Nel file #{offerte.basename} non ci sono le offerte MGP"
+         end
+
+      end
+   end
+   
+   def controllo_offerte_pce(offerte)
+   
+
+
+
    end
 
 end
