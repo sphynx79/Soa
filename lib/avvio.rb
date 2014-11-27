@@ -171,15 +171,17 @@ class Avvio
       vbox  =  Gtk::VBox.new(false,5)
       vbox.border_width = 10
       @errori.each{|k,v|
+         p k
+         p v
          align = Gtk::Alignment.new(0, 0, 0.0, 0.0)
          label  = Gtk::Label.new("#{k.to_s}:\n")
          initial_font = Pango::FontDescription.new("Sans Bold 10")
          label.modify_font(initial_font)
          align.add(label)
          vbox.pack_start(align)
-         v.each{|n,m|
+         v.each{|e|
             #label1 =  Gtk::Label.new("#{n.to_s}: #{m.to_s}\n")
-            label1 =  Gtk::Label.new("#{m.to_s}\n")
+            label1 =  Gtk::Label.new("#{e.to_s}\n")
             align1 = Gtk::Alignment.new(0, 0, 0.0, 0.0)
             align1.left_padding=40
             align1.add(label1)
@@ -203,9 +205,6 @@ class Avvio
 
 end
 
-class Controlli
 
 
 
-   
-end

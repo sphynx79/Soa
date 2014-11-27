@@ -1,5 +1,5 @@
 ---
-MGP_Validate_File:
+:MGP_Validate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MGP/Prezzi_Offerte_|V_CONTROOLLO_MGP|_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIIMMISSIONE_|YEAR_SHORT||MONTH||DAY|.xls"
@@ -7,7 +7,7 @@ MGP_Validate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIPOWER_|YEAR_SHORT||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_SEF_|YEAR_SHORT||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Validati/ProgrFisica_ENIPRELIEVO_|YEAR_SHORT||MONTH||DAY|.xls"
-MGP_Esitate_File:
+:MGP_Esitate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MGP/Prezzi_Offerte_|V_CONTROOLLO_MGP|_|DAY||MONTH||YEAR|.xls"
@@ -21,7 +21,7 @@ MGP_Esitate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Esitati/ProgrFisica_ENIPOWER_|YEAR_SHORT||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Esitati/ProgrFisica_SEF_|YEAR_SHORT||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/Giornaliero/Programmazione Fisica PCE/|MONTH| |MESETEXT| |YEAR|/Esitati/ProgrFisica_ENIPRELIEVO_|YEAR_SHORT||MONTH||DAY|.xls"
-Estero_Validate_File:
+:Estero_Validate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/FRANCIA/SOA FRANCIA/02 PowerNext/|MONTH| |MESETEXT|/01 Autorizzazioni Powernext/01_AutorizzazionePowerNext_ENI_|YEAR||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/FRANCIA/SOA FRANCIA/02 PowerNext/|MONTH| |MESETEXT|/02 Screenshot inviati/Invio Offerta su Piattaforma Powernext_|YEAR||MONTH||DAY|.doc"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/SVIZZERA/SOA SVIZZERA/02 Epex/|MONTH| |MESETEXT|/01 Autorizzazioni Epex/01_AutorizzazioneEpexCH_ENI_|YEAR||MONTH||DAY|.xls"
@@ -32,7 +32,7 @@ Estero_Validate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/BELGIO/Esiti Borsa/Validate/|MONTH| |MESETEXT|/Validate_BELPEX_|DAY||MONTH||YEAR_SHORT|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/OLANDA/|MONTH| |MESETEXT|/|DAY|_|MONTH|_|YEAR|/Export E-prog46_ita.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/OLANDA/Borsa/Validate/Validate_Olanda_|DAY||MONTH||YEAR_SHORT|.xls"
-Estero_Esitate_File:
+:Estero_Esitate_File:
 - "|F|PROGRAMMAZIONE |YEAR|/FRANCIA/SOA FRANCIA/02 PowerNext/|MONTH| |MESETEXT|/01 Autorizzazioni Powernext/01_AutorizzazionePowerNext_ENI_|YEAR||MONTH||DAY|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/FRANCIA/SOA FRANCIA/02 PowerNext/|MONTH| |MESETEXT|/03 Results/MarketReport_ENISPA-M_|YEAR||MONTH||DAY|.csv"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/SVIZZERA/SOA SVIZZERA/02 Epex/|MONTH| |MESETEXT|/01 Autorizzazioni Epex/01_AutorizzazioneEpexCH_ENI_|YEAR||MONTH||DAY|.xls"
@@ -43,36 +43,36 @@ Estero_Esitate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/BELGIO/Esiti Borsa/Esitate/|MONTH| |MESETEXT|/Esitate_BELPEX_|DAY||MONTH||YEAR_SHORT|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/OLANDA/|MONTH| |MESETEXT|/|DAY|_|MONTH|_|YEAR|/Export E-prog46_ita.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/OLANDA/Borsa/Esitate/Esitate_Olanda_|DAY||MONTH||YEAR_SHORT|.xls"
-MI_Form_File:
+:MI_Form_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI1_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI2_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI1.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI2.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI1/MI1_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI2/MI2_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
-MI_Esitate_File:
+:MI_Esitate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI1_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI2_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI1.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI2.xls"
-MI_Validate_File:
+:MI_Validate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI1_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI2_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI1.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI2.xls"
-MI_D_Form_File:
+:MI_D_Form_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI3.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI4.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI3/MI3_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/ITALIA/MGP-MA-REVOCA/|MONTH| |MESETEXT|/MI4/MI4_SPA_|YEAR_SHORT||MONTH||DAY|_v7.0"
-MI_D_Esitate_File:
+:MI_D_Esitate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI3.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Esitate/Esitate_Eni_|DAY||MONTH||YEAR|_MI4.xls"
-MI_D_Validate_File:
+:MI_D_Validate_File:
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI3_|DAY||MONTH||YEAR|.xls"
 - "|G|MEOR/PROGRAMMAZIONE |YEAR|/Controllo Prezzi MI/Prezzi_Offerte_MI4_|DAY||MONTH||YEAR|.xls"
 - "|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/Validate/Validate_Eni_|DAY||MONTH||YEAR|_MI3.xls"

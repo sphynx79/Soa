@@ -8,7 +8,7 @@ class Soa
       @nome_controllo  = nome 
       @zip             = nil 
       @file            = Array.new
-      @errore          = Hash.new
+      @errore          = Array.new
    end
 
    #
@@ -32,30 +32,30 @@ class Soa
       when /Autorizzazioni/ then
          email =  Pathname.glob("#{$F}PROGRAMMAZIONE #{$year}/ITALIA/Report/SOA Italia/Verbali/*.msg")
          if email.size > 3
-            errore["Autorizzazioni"] = "Attenzione sono stati trovati più di tre verbali autorizzativi"
+            errore << "Attenzione sono stati trovati più di tre verbali autorizzativi"
          elsif email.size < 3
-            errore["Autorizzazioni"] = "Attenzione non sono stati trovati tutti i verbali"
+            errore << "Attenzione non sono stati trovati tutti i verbali"
          end
       when /Estero/ then
          email =  Pathname.glob("#{$F}PROGRAMMAZIONE #{$year}/ITALIA/Report/SOA Italia/Verbali/Verbale autorizzativo borse elettriche estere *.msg")
          if email.size > 1
-            errore["Autorizzazione Estero"] = "Attenzione è stato trovato piu di un verbale autorizzativo Estero"
+            errore << "Attenzione è stato trovato piu di un verbale autorizzativo Estero"
          elsif email.size == 0
-            errore["Autorizzazione Estero"] = "Attenzione non è stato trovato nessun verbale autorizzativo Estero"
+            errore << "Attenzione non è stato trovato nessun verbale autorizzativo Estero"
          end
       when /MGP/ then
          email =  Pathname.glob("#{$F}PROGRAMMAZIONE #{$year}/ITALIA/Report/SOA Italia/Verbali/Verbale autorizzativo MGP-PCE *.msg")
          if email.size > 1
-            errore["Autorizzazione MGP-PCE"] = "Attenzione è stato trovato piu di un verbale autorizzativo MGP-PCE"
+            errore << "Attenzione è stato trovato piu di un verbale autorizzativo MGP-PCE"
          elsif email.size == 0
-            errore["Autorizzazione MGP-PCE"] = "Attenzione non è stato trovato nessun verbale autorizzativo MGP-PCE"
+            errore << "Attenzione non è stato trovato nessun verbale autorizzativo MGP-PCE"
          end
       when /MI/ then
          email =  Pathname.glob("#{$F}PROGRAMMAZIONE #{$year}/ITALIA/Report/SOA Italia/Verbali/Verbale autorizzativo MI1-MI2-MI3-MI4 *.msg")
          if email.size > 1
-            errore["Autorizzazione MI1-MI2-MI3-MI4"] = "Attenzione è stato trovato piu di un verbale autorizzativo MI1-MI2-MI3-MI4"
+            errore << "Attenzione è stato trovato piu di un verbale autorizzativo MI1-MI2-MI3-MI4"
          elsif email.size == 0
-            errore["Autorizzazione MI1-MI2-MI3-MI4"] = "Attenzione non è stato trovato nessun verbale autorizzativo MI1-MI2-MI3-MI4"
+            errore << "Attenzione non è stato trovato nessun verbale autorizzativo MI1-MI2-MI3-MI4"
          end
       end
       return email
@@ -91,16 +91,16 @@ class Soa
    def lista_file
       files = case nome_controllo
               when "Autorizzazioni"      then nil 
-              when "MGP_Validate"        then $settings["MGP_Validate_File"]
-              when "MGP_Esitate"         then $settings["MGP_Esitate_File"]
-              when "Estero_Validate"     then $settings["Estero_Validate_File"]
-              when "Estero_Esitate"      then $settings["Estero_Esitate_File"]
-              when "MI_Form"             then $settings["MI_Form_File"]
-              when "MI_Validate"         then $settings["MI_Validate_File"]
-              when "MI_Esitate"          then $settings["MI_Esitate_File"]
-              when "MI_Form_D"           then $settings["MI_D_Form_File"]
-              when "MI_Validate_D"       then $settings["MI_D_Validate_File"]
-              when "MI_Esitate_D"        then $settings["MI_D_Esitate_File"]
+              when "MGP_Validate"        then $settings[:MGP_Validate_File]
+              when "MGP_Esitate"         then $settings[:MGP_Esitate_File]
+              when "Estero_Validate"     then $settings[:Estero_Validate_File]
+              when "Estero_Esitate"      then $settings[:Estero_Esitate_File]
+              when "MI_Form"             then $settings[:MI_Form_File]
+              when "MI_Validate"         then $settings[:MI_Validate_File]
+              when "MI_Esitate"          then $settings[:MI_Esitate_File]
+              when "MI_Form_D"           then $settings[:MI_D_Form_File]
+              when "MI_Validate_D"       then $settings[:MI_D_Validate_File]
+              when "MI_Esitate_D"        then $settings[:MI_D_Esitate_File]
               when "Vpp"                 then nil
               end
       trova_file(files)
@@ -127,7 +127,7 @@ class Soa
                @file << result
             else
                dir, base = File.split(Pathname.new(file))
-               errore[base.to_s] = "Non è stato trovato il file #{base.to_s} nella directory #{dir.to_s}"
+               errore << "Non è stato trovato il file #{base.to_s} nella directory #{dir.to_s}"
             end
          end
       end
@@ -182,11 +182,16 @@ class Soa
       end
    end
 
+   #
+   # Esegue i controlli dei file da inserire negli zip
+   # 1. Scorro i file da inserire nello zip
+   # 2. Controllo il tipo di file, e lancio il relativo controllo
+   #
    def check_file
-      @file.each do |f| 
-         file = f.to_s
-         case file
-         when /Verbale autorizzativo/ then check_verbale(estrai_allegato(file))
+      @file.each do |file|
+         case 
+         when file.fnmatch("*Verbale autorizzativo*")     then check_verbale(estrai_allegato(file))
+         when file.fnmatch("*Prezzi_Offerte*")            then check_controllo_offerte(file)
          else
 
          end
@@ -199,13 +204,10 @@ class Soa
    # @param [String] allegato path del file excel del verbale
    # 
    def check_verbale(allegato)
-      Roo::Excelx.new(allegato){|s|
-            sheet = s.sheet(0)
+      sheet = Roo::Excelx.new(allegato).sheet(0)
       unless $data.between? (sheet.row(9)[1]),(sheet.row(10)[1])
-          errore[Pathname.new(allegato).basename] = "Il giorno selezionato non rietra tra le date presenti nel verbale #{Pathname.new(allegato).basename}"
+         errore << "Il giorno selezionato non rietra tra le date presenti nel verbale #{Pathname.new(allegato).basename}"
       end
-      }
-
       File.delete(allegato) if File.exist?(allegato)
    end
 
@@ -216,7 +218,7 @@ class Soa
    # @return [sting] path del file excel estratto
    #
    def estrai_allegato(email)
-      msg = Mapi::Msg.open(email)
+      msg = Mapi::Msg.open(email.to_s)
       allegato = msg.attachments.find { |h| (h.filename).match("xlsx")}
       tmp_file = open(TMP_FOLDER+ "/"+ File.basename(allegato.filename), 'wb') 
       allegato.save tmp_file
@@ -224,6 +226,16 @@ class Soa
       return TMP_FOLDER+ "/"+ File.basename(allegato.filename)
    end
 
+
+   def check_controllo_offerte(file_controlo)
+      s = Roo::Excel.new(file_controlo.to_s)
+      sheet = s.sheet(0)
+      unless (sheet.row(3)[1]) == $data
+         errore << "Nel file #{file_controlo.basename} c'è una data diversa da quella selezionata"
+      end
+
+
+   end
 
 end
 
