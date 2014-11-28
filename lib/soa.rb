@@ -195,7 +195,7 @@ class Soa
          when file.fnmatch("*Prezzi_Offerte*")            then check_controllo_offerte(file)
          when file.fnmatch("*Validate_Eni*")              then check_offerte(file)
          when file.fnmatch("*Esitate_Eni*")               then check_offerte(file)
-         # when file.fnmatch("*ProgrFisica*")               then controllo_offerte_pce(file)
+         when file.fnmatch("*ProgrFisica*")               then controllo_offerte_pce(file)
          else
 
          end
@@ -234,7 +234,7 @@ class Soa
    # Controllo se nella tabella del check offerte data e che i controlli siano tutti OK
    # lo fa sia per il controllo MGP sia per il controllo MI
    #
-   # # 1. Apro il mio file
+   # 1. Apro il mio file
    # 2. Selezioni il primo foglio
    # 3. Metto in un array bidimensionale la mia tabellina dei check
    # 4. Scorro la prima colonna della mia tabellina check
@@ -242,8 +242,7 @@ class Soa
    # 6. Altrimenti controllo che il check sia OK
    #
    def check_controllo_offerte(file_controlo)
-      s                 = Roo::Excel.new(file_controlo.to_s)
-      sheet             = s.sheet(0)
+      sheet = apri_file(file_controlo)
       tabella_controlli = [sheet.column(2),sheet.column(3)]
       tabella_controlli[0].each_with_index do |x,y|
          if x == "FLUSSO"
@@ -262,14 +261,13 @@ class Soa
    # Controllo se le offerte MGP|MI scaricate hanno all'interno del file la data selezionata e
    # le offerte presenti all'interno del file corrispondono al mercato presente nel nome del file
    #
-   # # 1. Apro il mio file
+   # 1. Apro il mio file
    # 2. Selezioni il primo foglio
    # 3. Controllo se la data di inizio e di fine corrisponde alla data selezionata 
    # 4. Controllo se il mercato presente all'interno del file corrisponde con quello del nome del file
    #
    def check_offerte(offerte)
-      s                 = Roo::Excel.new(offerte.to_s)
-      sheet             = s.sheet(0)
+      sheet = apri_file(offerte)
       if  (sheet.cell("k",5) != "#{$day}/#{$month}/#{$year}") || (sheet.cell("k",7) != "#{$day}/#{$month}/#{$year}")
          errore << "Data presente nel file #{offerte.basename} non corrisponde con la data selezionata"
       end
@@ -287,12 +285,31 @@ class Soa
       end
    end
 
+      
+   # Controllo le offerte PCE
+   #
+   # @param [Pathname] offerte pce da controllare
+   #
    def controllo_offerte_pce(offerte)
-
-
-
-
+      sheet = apri_file(offerte)
+      if  sheet.cell("J",3) != "#{$day}/#{$month}/#{$year}"
+         errore << "Data presente nel file #{offerte.to_s} non corrisponde con la data selezionata"
+      end
    end
+   
+   #
+   # Apre il file excel
+   #
+   # @param [Pathname] file da aprire
+   # @return [Roo::Excel] sheet del foglio excel
+   #
+   def apri_file(file)
+      s = Roo::Excel.new(file.to_s)
+      p s.sheet(0).class
+      return s.sheet(0)
+   end
+   
+
 
 end
 

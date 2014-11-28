@@ -9,8 +9,8 @@ require File.join(File.dirname(__FILE__), 'lib/Gui.rb')
 require File.join(File.dirname(__FILE__), 'lib/soa.rb')
 require File.join(File.dirname(__FILE__), 'lib/avvio.rb')
 
-$F             = 'F:/'
-$G             = 'G:/'
+$F             = 'C:/'
+$G             = 'C:/'
 $controllomgp  = "MGP_1.1"
 $settings      = Hash.new
 $data          = nil
