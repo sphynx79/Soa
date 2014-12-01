@@ -191,11 +191,18 @@ class Soa
    def check_file
       @file.each do |file|
          case 
-         when file.fnmatch("*Verbale autorizzativo*")     then check_verbale(estrai_allegato(file))
-         when file.fnmatch("*Prezzi_Offerte*")            then check_controllo_offerte(file)
-         when file.fnmatch("*Validate_Eni*")              then check_offerte(file)
-         when file.fnmatch("*Esitate_Eni*")               then check_offerte(file)
-         when file.fnmatch("*ProgrFisica*")               then controllo_offerte_pce(file)
+         when file.fnmatch("*Verbale autorizzativo*")                then check_verbale(estrai_allegato(file))
+         when file.fnmatch("*Prezzi_Offerte*")                       then check_controllo_offerte(file)
+         when file.fnmatch("*Validate_Eni*")                         then check_offerte(file)
+         when file.fnmatch("*Esitate_Eni*")                          then check_offerte(file)
+         when file.fnmatch("*ProgrFisica*")                          then check_offerte_pce(file)
+         when file.fnmatch("*Scheduling & Bilateral Program*")       then check_scheduling_bilateral(file)
+         when file.fnmatch("*tool autorizzazione offerte belpex*")   then check_tool_belgio(file)
+         when file.fnmatch("*Export E-prog46_ita.xls")               then check_tool_olanda(file) 
+         when file.fnmatch("*Validate_*_*.docx")                     then check_validate_epex(file) 
+         when file.fnmatch("*Esitate_Francia_*.csv")                 then check_esitate_epex(file)
+         when file.fnmatch("*Esitate_Germania_*.csv")                then check_esitate_epex(file) 
+         when file.fnmatch("*Esitate_Svizzera_*.csv")                then check_esitate_epex(file) 
          else
 
          end
@@ -285,18 +292,118 @@ class Soa
       end
    end
 
-      
+
    # Controllo le offerte PCE
    #
    # @param [Pathname] offerte pce da controllare
    #
-   def controllo_offerte_pce(offerte)
+   def check_offerte_pce(offerte)
       sheet = apri_file(offerte)
       if  sheet.cell("J",3) != "#{$day}/#{$month}/#{$year}"
          errore << "Data presente nel file #{offerte.to_s} non corrisponde con la data selezionata"
       end
    end
-   
+
+   #
+   # Controllo del file Scheduling & Bilateral Program
+   # 1. Apro il mio file
+   # 2. Selezioni il foglio "EPEX"
+   # 3. Controllo se tutti i controlli siano OK
+   # 4. Selezioni il foglio "Extern IT"
+   # 5. Controlo se la data all'interno del file coincide con quella selezionata
+   #
+   # @param [Pathname] file_sch_bil file delle offerte germania, svizzera, francia
+   #
+   def check_scheduling_bilateral(file_sch_bil)
+      s = Roo::Excel.new(file_sch_bil.to_s)
+      sheet = s.sheet("EPEX")
+      tabella_controlli = sheet.to_matrix(34, 2,  36, 4).to_a
+      tabella_controlli.each do |row|
+         if  row[2] != "OK"
+            errore << "Nel file #{file_sch_bil.to_s} il \"#{row[0]}\" non è OK"
+         end
+      end
+      sheet = s.sheet("Extern IT")
+      if sheet.cell("C",2) != "#{$day}/#{$month}/#{$year}"
+         errore << "Data presente nel file #{file_sch_bil.to_s} non corrisponde con la data selezionata"
+      end
+   end
+
+   #
+   # Controllo del file utilizzato per le offerte Belpex
+   # 1. Apro il mio file
+   # 2. Controllo se tutti i controlli siano OK
+   # 3. Controlo se la data all'interno del file coincide con quella selezionata
+   #
+   # @param [Pathname] file_tool_belpex file delle offerte Belpex
+   #
+   def check_tool_belgio(file_tool_belpex)
+      s = Roo::Excel.new(file_tool_belpex.to_s)
+
+      if s.sheet("Buy summary").cell("G",2) != "OK"
+         errore << "Nel file #{file_tool_belpex.to_s} nel foglio \"Buy summary\" il check verbale non è OK"
+      end
+      if s.sheet("Sell summary").cell("G",2) != "OK"
+         errore << "Nel file #{file_tool_belpex.to_s} nel foglio \"Sell summary\" il check verbale non è OK"
+      end
+      if s.sheet("Buy summary").cell("B",1) != $data
+         errore << "Data presente nel file #{file_tool_belpex.to_s} non corrisponde con la data selezionata"
+      end
+   end
+
+   #
+   # Controllo del file utilizzato per le offerte Olanda
+   # 1. Apro il mio file
+   # 2. Controllo se tutti i controlli siano OK
+   # 3. Controlo se la data all'interno del file corrisponde alla data selezionataionata
+   # 4. Controlo se la tabella dei check_tool_olanda è tutto OK
+   # 5. Controlo se la data selezionata rientra tra quelle del Verbale
+   #
+   # @param [Pathname] file_tool_belpex file delle offerte Belpex
+   #
+   def check_tool_olanda(file_tool_olanda)
+      s = Roo::Excel.new(file_tool_olanda.to_s)
+      # Controllo la data
+      if s.sheet("Config").cell("L",10) != $data
+         errore << "Data presente nel file #{file_tool_olanda.to_s} non corrisponde con la data selezionata"
+      end
+      # Controllo tabella dei check Verbale
+      tabella_controlli = s.sheet("Check APX").to_matrix(13, 8,  15, 10).to_a
+      tabella_controlli.each do |row|
+         if  row[2] != "OK"
+            errore << "Nel file #{file_tool_olanda.to_s} foglio \"Check APX\" il \"#{row[0]}\" non è OK"
+         end
+      end
+      # Check se data selezionata è compresa tra quelle del verbale
+      unless $data.between? (s.sheet("Verbale").cell("D",9)),(s.sheet("Verbale").cell("D",10))
+         errore << "Il giorno selezionato non rientra tra le date presenti nel verbale foglio \"Verbale \" del file #{file_tool_olanda.to_s}"
+      end
+   end
+
+   #
+   # Controllo se la data presente all'interno delle validate Epex corrisponde alla data selezionata
+   #
+   # @param [Pathname] file_epex file delle validate Epex
+   #
+   def check_validate_epex(file_epex)
+      doc = Docx::Document.open(file_epex.to_s)
+      if doc.paragraphs[8].text[-10..-1] != "#{$day}/#{$month}/#{$year}"
+         errore << "La data all'interno del file #{file_epex.to_s} non coincide con la data selezionata"
+      end
+   end
+
+   #
+   # Controllo se la data presente all'interno delle esitate Epex corrisponde alla data selezionata
+   #
+   # @param [Pathname] file_epex file delle validate Epex
+   #
+   def check_esitate_epex(file_epex)
+      csv = Roo::CSV.new(file_epex.to_s, csv_options: {col_sep: ";"})   
+      if csv.cell(1,2) != "#{$day}/#{$month}/#{$year}"
+         errore << "La data all'interno del file #{file_epex.to_s} non coincide con la data selezionata"
+      end
+   end
+
    #
    # Apre il file excel
    #
@@ -305,10 +412,9 @@ class Soa
    #
    def apri_file(file)
       s = Roo::Excel.new(file.to_s)
-      p s.sheet(0).class
       return s.sheet(0)
    end
-   
+
 
 
 end

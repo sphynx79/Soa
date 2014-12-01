@@ -5,7 +5,6 @@ require 'win32ole'
 require 'zip'
 require 'pathname'
 require 'ap'
-require 'byebug'
 require 'zip'
 require 'yaml'
 
@@ -76,7 +75,7 @@ class Avvio
             x.gsub!("|MESETEXT|",$monthtext)
             x.gsub!("|F|", $F)
             x.gsub!("|G|", $G)
-            x.gsub!("|V_CONTROOLLO_MGP|", $controllomgp)
+            x.gsub!("|V_CONTROLLO_MGP|", $controllomgp)
             x
          }
       }
