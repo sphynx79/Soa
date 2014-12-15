@@ -5,7 +5,6 @@
 require 'date'
 require 'roo'
 require 'spreadsheet'
-require 'byebug'
 require 'docx'
 require 'win32ole'
 require File.join(File.dirname(__FILE__), 'lib/Gui.rb')

@@ -4,7 +4,6 @@ require 'fileutils'
 require 'win32ole'
 require 'zip'
 require 'pathname'
-require 'ap'
 require 'zip'
 require 'yaml'
 require File.join(File.dirname(__FILE__), 'soa.rb')
