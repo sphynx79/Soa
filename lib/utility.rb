@@ -1,16 +1,3 @@
-def controlloRev(path,inputfile)
-   #pp "#{path}#{inputfile}.xls"
-   if File.exists? "#{path}#{inputfile}_rev2.xls"
-      filerev = "#{inputfile}_rev2.xls"
-   elsif File.exists? "#{path}#{inputfile}_rev1.xls"
-      filerev = "#{inputfile}_rev1.xls"
-   elsif File.exists? "#{path}#{inputfile}.xls"
-      filerev = "#{inputfile}.xls"
-   else
-      filerev =  "errore #{inputfile}"
-   end
-   filerev
-end
 
 def NumeroToMese(mese)
    mese_text = case mese

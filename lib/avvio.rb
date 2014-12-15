@@ -7,6 +7,7 @@ require 'pathname'
 require 'ap'
 require 'zip'
 require 'yaml'
+require File.join(File.dirname(__FILE__), 'soa.rb')
 
 module ExcelConst end
 
@@ -35,9 +36,14 @@ class Avvio
    def start(button, progress,statusbar,parent)
       @button, @progress, @statusbar, @parent = button, progress, statusbar, parent
       initialize_global_variable
-      init_gui
-      crea_soa
-      finalizze_application
+      if @soa.has_key?("Vpp")
+         init_gui(5)
+         crea_soa_vpp
+      else
+         init_gui(1)
+         crea_soa
+      end
+         finalizze_application
    end
 
    #
@@ -84,15 +90,34 @@ class Avvio
    #
    # Inizializzo la mia gui per far vedere la progress-bar con i vari step compiuti
    #
-   def init_gui
+   def init_gui(step)
       statusbar.push(1, "Avvio")
       progress.text = "%.0f%%" % "0"
       progress.fraction = 0 / 100.0
       while (Gtk.events_pending?)
          Gtk.main_iteration
       end
-      @partial_progress =  100/(@soa.length+1)
+      @partial_progress =  100/(@soa.length+step)
       @percent = @partial_progress
+   end
+
+   def crea_soa_vpp
+      soa["Vpp"] =  SoaVpp.new("Vpp")
+      avanzamento_progress_bar("Inizializzo zip path")
+      sleep 1
+      soa["Vpp"].inizializza_zip_path
+      avanzamento_progress_bar("Inizializzo file path")
+      soa["Vpp"].inizializza_file_path
+      avanzamento_progress_bar("Creo autorizzazione")
+      soa["Vpp"].crea_autorizzazione
+      avanzamento_progress_bar("Crea zip")
+      soa["Vpp"].crea_zip
+      unless (soa["Vpp"].errore).empty?
+         @errori["Vpp"] = soa["Vpp"].errore
+      end
+      #ap soa
+
+
    end
 
    #
@@ -107,8 +132,9 @@ class Avvio
    def crea_soa
       soa.each do |nome_soa,obj_soa|
          avanzamento_progress_bar(nome_soa)
-         soa[nome_soa] =  Soa.new(nome_soa)
-         soa[nome_soa].inizializza_path
+         soa[nome_soa] =  SoaNormali.new(nome_soa)
+         soa[nome_soa].inizializza_zip_path
+         soa[nome_soa].inizializza_file_path
          soa[nome_soa].crea_zip
          unless (soa[nome_soa].errore).empty?
             @errori[nome_soa] = soa[nome_soa].errore

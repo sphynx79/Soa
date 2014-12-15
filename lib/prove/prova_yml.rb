@@ -2,41 +2,21 @@ require "pathname"
 require 'yaml'
 require 'ap'
 
-class Array
-   def parse_path()
-      each{|k| yield(k)}
-   end
+a = ["|F|PROGRAMMAZIONE |YEAR|/ITALIA/Report/SOA Italia/File Zip/soa_vpp/mail/", "michele"]
+dsasd= "soa_vpp"
+c =  a.select{|x| x.match dsasd }
+p c
+CONF=File.join(File.dirname(__FILE__), "settings.yml")
+
+test = {:MGP => ["ciao","come","ti","chiami"], :VPP => {:email=>"c:/ciao/michele", :path =>"D:/bo/che/ne/so"}}
+
+File.open(CONF, "w") do |file|
+   file.write (test).to_yaml
 end
 
 
-year = "2014"
-year_short = "14"
-month = "11"
-day   = "17"
-mesetext = "Novembre"
-disco_f = "F:/"
-disco_g = "G:/"
-vers_cont_mgp = "MGP_1.1"
-
-
-CONF=File.join(File.dirname(__FILE__), "settings.yml")
 settings = YAML::load_file CONF
-
-settings.each{|k,v|
-   v.collect!{|x|
-   x.gsub!("|YEAR|", year)
-   x.gsub!("|YEAR_SHORT|", year_short)
-   x.gsub!("|MONTH|", month)
-   x.gsub!("|DAY|", day)
-   x.gsub!("|MESETEXT|", mesetext)
-   x.gsub!("|F|", disco_f)
-   x.gsub!("|G|", disco_g)
-   x.gsub!("|V_CONTROOLLO_MGP|", vers_cont_mgp)
-   x
-}
-}
 ap settings
-
 
 
 # settings["MGP_Validate"].parse_path{|x|

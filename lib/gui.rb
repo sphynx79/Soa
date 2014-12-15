@@ -192,12 +192,7 @@ class GuiSoa < Gtk::Window
                 # Istanzio Download e avvio il mio programma
                 # lista_soa = "{\"Autorizzazioni\"=>nil, \"MGP_Validate\"=>nil, \"MGP_Esitate\"=>nil, \"Estero_Validate\"=>nil, \"Estero_Esitate\"=>nil}"
                 soa = Avvio.new(data,lista_soa)
-                if lista_soa.has_key?("Vpp")
-                 soa.start_vpp(button,pbar,statusbar,self)
-                else
-                 soa.start(button,pbar,statusbar,self)
-                end
-
+                soa.start(button,pbar,statusbar,self)
             }
 
         end
